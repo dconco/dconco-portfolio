@@ -1,0 +1,42 @@
+<div
+	class="container mh-copyright wow fadeInUp"
+	data-wow-duration="0.8s"
+	data-wow-delay="0.2s"
+>
+	<div class="row section-separator">
+		<div class="col-sm-6">
+			<div class="text-left text-xs-center">
+				<p>
+					&copy; All right reserved
+					<a href="https://dconco.dev">
+						dconco&reg;</a
+					>
+				</p>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<ul class="social-icon">
+				<li>
+					<a href="https://facebook.com/daveconco"
+						><i class="fa fa-facebook"></i
+					></a>
+				</li>
+				<li>
+					<a href="tel:+2349064772574"
+						><i class="fa fa-phone"></i
+					></a>
+				</li>
+				<li>
+					<a href="https://wa.link/2b375w"
+						><i class="fa fa-whatsapp"></i
+					></a>
+				</li>
+				<li>
+					<a href="https://github.com/dconco"
+						><i class="fa fa-github"></i
+					></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

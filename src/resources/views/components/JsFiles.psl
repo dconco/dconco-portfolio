@@ -1,0 +1,153 @@
+<!-- 
+   ============
+   * JS Files
+   ============
+   -->
+
+{{! JQUERY FIRST, THEN POPPER.JS, THEN BOOTSTRAP JS !}}
+
+{{! JQUERY !}}
+<script src="{{ asset('Assets::Plugins::Js::Jquery.min.js') }}"></script>
+{{! POPPER !}}
+<script src="{{ asset('Assets::Plugins::Js::Popper.min.js') }}"></script>
+{{! BOOTSTRAP !}}
+<script src="{{ asset('Assets::Plugins::Js::Bootstrap.min.js') }}"></script>
+{{! OWL CAROUSEL !}}
+<script src="{{ asset('Assets::Plugins::Js::Owl.carousel.js') }}"></script>
+{{! VALIDATOR !}}
+<script src="{{ asset('Assets::Plugins::Js::Validator.min.js') }}"></script>
+{{! WOW !}}
+<script src="{{ asset('Assets::Plugins::Js::Wow.min.js') }}"></script>
+{{! MIXIN JS !}}
+<script src="{{ asset('Assets::Plugins::Js::Jquery.mixitup.min.js') }}"></script>
+{{! CIRCLE PROGRESS !}}
+<script src="{{ asset('Assets::Plugins::Js::Circle-progress.js') }}"></script>
+{{! JQUERY NAV !}}
+<script src="{{ asset('Assets::Plugins::Js::Jquery.nav.js') }}"></script>
+{{! FANCYBOX JS !}}
+<script src="{{ asset('Assets::Plugins::Js::Jquery.fancybox.min.js') }}"></script>
+{{! MAP API !}}
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyCRP2E3BhaVKYs7BvNytBNumU0MBmjhhxc"></script>
+{{! ISOTOPE JS !}}
+<script src="{{ asset('Assets::Plugins::Js::isotope.pkgd.js') }}"></script>
+<script src="{{ asset('Assets::Plugins::Js::packery-mode.pkgd.js') }}"></script>
+{{! Custom Scripts !}}
+<script src="{{ asset('Assets::Js::Map-Init.js') }}"></script>
+<script src="{{ asset('Assets::Js::Custom-Scripts.js') }}"></script>
+
+<!--
+   =============
+   * After neccessary customization/modification, Please minify
+   * JavaScript/jQuery according to https://browserdiet.com/en/ for better performance
+   =============
+   -->
+{{! STYLE SWITCH STYLESHEET ONLY FOR DEMO !}}
+<link rel="stylesheet" href="{{ asset('Demo::Demo.css') }}" />
+<script type="text/javascript" src="{{ asset('Demo::Styleswitcher.js') }}"></script>
+<script type="text/javascript" src="{{ asset('Demo::Demo.js') }}"></script>
+<div class="demo-style-switch" id="switch-style">
+	<a id="toggle-switcher" class="switch-button"
+		><i class="fa fa-snowflake-o fa-spin"></i
+	></a>
+	<div class="switched-options">
+		<ul>
+			<li class="mh-demo-styles">
+				<h4>Theme</h4>
+				<ul>
+					<li>
+						<a href="#">
+							<img
+								src="{{ asset('Assets::Images::H2w.png') }}"
+								alt=""
+								class="img-fluid"
+						/></a>
+					</li>
+					<li>
+						<a href="#">
+							<img
+								src="{{ asset('Assets::Images::H2.png') }}"
+								alt=""
+								class="img-fluid"
+						/></a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+		<div class="config-title">Colors :</div>
+		<ul class="styles">
+			<li>
+				<a
+					href="#"
+					onclick="setActiveStyleSheet('blue'); return false;"
+					title="Blue"
+				>
+					<div class="blue"></div
+				></a>
+			</li>
+			<li>
+				<a
+					href="#"
+					onclick="setActiveStyleSheet('purple'); return false;"
+					title="Purple"
+				>
+					<div class="purple"></div
+				></a>
+			</li>
+			<li>
+				<a
+					href="#"
+					onclick="setActiveStyleSheet('blue-munsell'); return false;"
+					title="Blue Munsell"
+				>
+					<div class="blue-munsell"></div
+				></a>
+			</li>
+			<li>
+				<a
+					href="#"
+					onclick="setActiveStyleSheet('orange'); return false;"
+					title="Orange"
+				>
+					<div class="orange"></div
+				></a>
+			</li>
+			<li>
+				<a
+					href="#"
+					onclick="setActiveStyleSheet('slate'); return false;"
+					title="Slate"
+				>
+					<div class="slate"></div
+				></a>
+			</li>
+			<li>
+				<a
+					href="#"
+					onclick="setActiveStyleSheet('green'); return false;"
+					title="Green"
+				>
+					<div class="green"></div
+				></a>
+			</li>
+			<li>
+				<a
+					href="#"
+					onclick="setActiveStyleSheet('yellow'); return false;"
+					title="Yellow"
+				>
+					<div class="yellow"></div
+				></a>
+			</li>
+			<li>
+				<a
+					href="#"
+					onclick="setActiveStyleSheet('red'); return false;"
+					title="Red"
+				>
+					<div class="red"></div
+				></a>
+			</li>
+		</ul>
+	</div>
+</div>
