@@ -30,15 +30,13 @@
       					data-wow-duration="0.8s"
       					data-wow-delay="0.3s"
       				>
-      					<i class="fa fa-apple purple-color"></i>
-      					&nbsp;&nbsp;&nbsp;
       					<i class="fa fa-android purple-color"></i>
       					<h3>Mobile Applications</h3>
       					<p>I focus on creating seamless mobile experiences for both iOS and Android devices using React Native. My expertise includes:</p>
 
 					      <h6>Key Expertise</h6>
       					<ul style="text-indent: 15px">
-      					   <li>&bull; &nbsp; Cross-platform development (iOS, Android) using React Native</li>
+      					   <li>&bull; &nbsp; Cross-platform development (iOS, Android) using React Native and Ionic</li>
                         <li>&bull; &nbsp; Mobile app design and prototyping</li>
                         <li>&bull; &nbsp; User interface (UI) and user experience (UX) optimization</li>
                         <li>&bull; &nbsp; Integration with third-party APIs and services</li>
@@ -64,36 +62,19 @@
          					<li>&bull; &nbsp; RESTful APIs</li>
       					</ul>
       					<br>
-					      <h6>How I Work</h6>
-					      <p>I take a collaborative approach to understand your mobile app requirements, designing and developing customized solutions that meet your needs. My process includes:</p>
-      					<ul style="text-indent: 15px">
-         					<li>&bull; &nbsp; Regular updates and progress tracking</li>
-         					<li>&bull; &nbsp; Timely delivery and deployment</li>
-         					<li>&bull; &nbsp; Ongoing support and maintenance</li>
-      					</ul>
-      					<br>
-					      <h6>What to Expect</h6>
-      					<ul style="text-indent: 15px">
-         					<li>&bull; &nbsp; High-quality, user-friendly mobile apps</li>
-         					<li>&bull; &nbsp; Scalable and secure architecture</li>
-         					<li>&bull; &nbsp; Fast development and deployment</li>
-         					<li>&bull; &nbsp; Cost-effective solutions</li>
-      					</ul>
-      					<br>
 					      <h6>Get Started</h6>
 					      <p>Ready to bring your mobile app idea to life? Let's discuss your project and create a stunning mobile experience together!</p>
-					      
-               		
-      		<div style="display:flex; justify-content:center;">
-      			<a
-   					href="{{ route('skills') }}"
-   					class="btn wow fadeInUp"
-   					data-wow-duration="0.8s"
-   					data-wow-delay="0.4s"
-   					onclick="$('.section-loader').fadeIn('slow')"
-   					>Contact me &nbsp;<i class="fa fa-arrow-circle-o-right"></i
-   				></a>
-				</div>
+
+               		<div style="display:flex; justify-content:center;">
+               			<a
+            					href="{{ route('skills') }}"
+            					class="btn wow fadeInUp"
+            					data-wow-duration="0.8s"
+            					data-wow-delay="0.4s"
+            					onclick="$('.section-loader').fadeIn('slow')"
+            					>Contact me &nbsp;<i class="fa fa-arrow-circle-o-right"></i
+            				></a>
+         				</div>
       			   </div>
       			</div>
       			<div class="col-sm-4">
@@ -104,14 +85,46 @@
       				>
       					<i class="fa fa-code iron-color"></i>
       					<h3>Web Development</h3>
-      					<p>
-      						I builds standard website and well functionality,
-      						planning and developing software solutions and web
-      						applications, supporting and maintaining a company's
-      						websites and digital products. The day-to-day work as a
-      						web developer highly depends on constantly evolving
-      						internet innovations.
-      					</p>
+      					<p>I specialize in designing and developing responsive, scalable, and secure websites that meet your business needs.</p>
+
+					      <h6>Key Expertise</h6>
+      					<ul style="text-indent: 15px">
+      					   <li>&bull; &nbsp; Front-end development using HTML5, CSS3, JavaScript, and React</li>
+      					   <li>&bull; &nbsp; Back-end development using PHP, PhpSlides and Laravel</li>
+      					   <li>&bull; &nbsp; Responsive web design and mobile-first development</li>
+      					   <li>&bull; &nbsp; Website optimization for search engines (SEO)</li>
+      					   <li>&bull; &nbsp; Website security and performance optimization</li>
+      					</ul>
+      					<br />
+					      <h6>Services Offered</h6>
+      					<ul style="text-indent: 15px">
+      					   <li>&bull; &nbsp; Custom website design and development</li>
+      					   <li>&bull; &nbsp; Website redesign and migration</li>
+      					   <li>&bull; &nbsp; Website maintenance and support</li>
+      					   <li>&bull; &nbsp; Content Management Systems (CMS)</li>
+      					   <li>&bull; &nbsp; E-commerce solutions</li>
+      					</ul>
+      					<br />
+					      <h6>Technologies Used</h6>
+      					<ul style="text-indent: 15px">
+      					   <li>&bull; &nbsp; <b>Programming languages:</b> HTML, CSS, JavaScript</li>
+      					   <li>&bull; &nbsp; <b>Frameworks:</b> Bootstrap, Tailwindcss, ReactJS, Vue</li>
+      					   <li>&bull; &nbsp; <b>Databases:</b> MySQL, MongoDB</li>
+      					</ul>
+      					<br>
+					      <h6>Get Started</h6>
+					      <p>Ready to bring your website project to life? Let's discuss your requirements and create a stunning website together!</p>
+
+               		<div style="display:flex; justify-content:center;">
+               			<a
+            					href="{{ route('skills') }}"
+            					class="btn wow fadeInUp"
+            					data-wow-duration="0.8s"
+            					data-wow-delay="0.4s"
+            					onclick="$('.section-loader').fadeIn('slow')"
+            					>Contact me &nbsp;<i class="fa fa-arrow-circle-o-right"></i
+            				></a>
+         				</div>
       				</div>
       			</div>
       			<div class="col-sm-4">
@@ -135,6 +148,35 @@
       				</div>
       			</div>
       		</div>
+      		
+					      <h6>How I Work</h6>
+      					<ul style="text-indent: 15px">
+         					<li>&bull; &nbsp; <b>Requirements gathering:</br> We discuss your project goals and objectives.</li>
+         					<li>&bull; &nbsp; <b>Design and prototyping:</b> I create wireframes and prototypes to visualize your project.</li>
+         					<li>&bull; &nbsp; <b>Development:</b> I write clean, efficient, and well-documented code.</li>
+         					<li>&bull; &nbsp; <b>Testing and quality assurance:</b> I ensure your application & website works flawlessly.</li>
+         					<li>&bull; &nbsp; <b>Deployment and maintenance:</b> I deploy your application & website and provide ongoing support.</li>
+      					</ul>
+      					<br>
+					      <h6>Benefits of Working with Me</h6>
+      					<ul style="text-indent: 15px">
+         					<li>&bull; &nbsp; Fast development and deployment</li>
+         					<li>&bull; &nbsp; High-quality, scalable solutions</li>
+         					<li>&bull; &nbsp; Cost-effective services</li>
+         					<li>&bull; &nbsp; Ongoing support and maintenance</li>
+         					<li>&bull; &nbsp; Collaborative approach</li>
+      					</ul>
+      					<br>
+					      <h6>What to Expect</h6>
+      					<ul style="text-indent: 15px">
+         					<li>&bull; &nbsp; Collaborative approach to understand your requirements</li>
+         					<li>&bull; &nbsp; Customized solutions tailored to your needs</li>
+         					<li>&bull; &nbsp; Regular updates and progress tracking</li>
+         					<li>&bull; &nbsp; Timely delivery and deployment</li>
+         					<li>&bull; &nbsp; Ongoing support and maintenance</li>
+      					</ul>
+      					<br>
+
       		<div style="display:flex; justify-content:center">
       			<a
    					href="{{ route('skills') }}"
