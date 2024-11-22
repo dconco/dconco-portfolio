@@ -33,19 +33,20 @@
 						data-wow-duration="0.8s"
 						data-wow-delay="0.2s"
 					>
-						I'm dconco, short of Dave Conco, a creative fusion of coding expertise and
-						diverse talents.
+						I'm dconco, short for Dave Conco, a creative fusion of coding expertise and diverse talents.
 						<br />
 						<br />
                   <? if (isset(Props()['detailed'])): ?>
-						I love doing community services, creating of frameworks/libraries and contributing to public repositories.
-						The top most frameworks I created and still on maintenance is the <b><a href="https://github.com/phpslides">PhpSlides</a></b> framework
+						I have a passion for community services, creating innovative frameworks and libraries, and contributing to public repositories.
+						Notably, I developed and maintain the <b><a href="https://github.com/phpslides">PhpSlides</a></b> framework. My focus areas include:
 						<br />
 						<br />
                   <? endif ?>
-						I focus on creating fullstack websites, APIs (Application Programming Interface) and mobile
-						applications both Android & iOS, with the use of React
-						Native.
+						Building full-stack websites.
+						<br />
+                  Designing and implementing APIs (Application Programming Interfaces).
+						<br />
+                  Developing mobile applications for both Android and iOS using React Native.
 						<br />
 						Some of the perfect well-known languages/frameworks listed below:
 					</p>
