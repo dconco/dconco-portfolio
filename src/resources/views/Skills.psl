@@ -46,84 +46,13 @@
 										<div class="candidatos">
 											<div class="parcial">
 												<div class="info">
-													<div class="nome">Javascript</div>
-													<div class="percentagem-num">90%</div>
+													<div class="nome">PhpSlides</div>
+													<div class="percentagem-num">100%</div>
 												</div>
 												<div class="progressBar">
 													<div
 														class="percentagem"
-														style="width: 90%"
-													></div>
-												</div>
-											</div>
-										</div>
-										<div class="candidatos">
-											<div class="parcial">
-												<div class="info">
-													<div class="nome">PHP</div>
-													<div class="percentagem-num">90%</div>
-												</div>
-												<div class="progressBar">
-													<div
-														class="percentagem"
-														style="width: 90%"
-													></div>
-												</div>
-											</div>
-										</div>
-										<div class="candidatos">
-											<div class="parcial">
-												<div class="info">
-													<div class="nome">ReactJS</div>
-													<div class="percentagem-num">85%</div>
-												</div>
-												<div class="progressBar">
-													<div
-														class="percentagem"
-														style="width: 85%"
-													></div>
-												</div>
-											</div>
-										</div>
-										<div class="candidatos">
-											<div class="parcial">
-												<div class="info">
-													<div class="nome">React Native</div>
-													<div class="percentagem-num">80%</div>
-												</div>
-												<div class="progressBar">
-													<div
-														class="percentagem"
-														style="width: 80%"
-													></div>
-												</div>
-											</div>
-										</div>
-										<div class="candidatos">
-											<div class="parcial">
-												<div class="info">
-													<div class="nome">CSS</div>
-													<div class="percentagem-num">90%</div>
-												</div>
-												<div class="progressBar">
-													<div
-														class="percentagem"
-														style="width: 98%"
-													></div>
-												</div>
-											</div>
-										</div>
-
-										<div class="candidatos">
-											<div class="parcial">
-												<div class="info">
-													<div class="nome">SQL</div>
-													<div class="percentagem-num">75%</div>
-												</div>
-												<div class="progressBar">
-													<div
-														class="percentagem"
-														style="width: 75%"
+														style="width: 100%"
 													></div>
 												</div>
 											</div>
@@ -145,6 +74,48 @@
 										<div class="candidatos">
 											<div class="parcial">
 												<div class="info">
+													<div class="nome">PHP</div>
+													<div class="percentagem-num">98%</div>
+												</div>
+												<div class="progressBar">
+													<div
+														class="percentagem"
+														style="width: 98%"
+													></div>
+												</div>
+											</div>
+										</div>
+										<div class="candidatos">
+											<div class="parcial">
+												<div class="info">
+													<div class="nome">Tailwind CSS</div>
+													<div class="percentagem-num">97%</div>
+												</div>
+												<div class="progressBar">
+													<div
+														class="percentagem"
+														style="width: 97%"
+													></div>
+												</div>
+											</div>
+										</div>
+										<div class="candidatos">
+											<div class="parcial">
+												<div class="info">
+													<div class="nome">ReactJS</div>
+													<div class="percentagem-num">95%</div>
+												</div>
+												<div class="progressBar">
+													<div
+														class="percentagem"
+														style="width: 95%"
+													></div>
+												</div>
+											</div>
+										</div>
+										<div class="candidatos">
+											<div class="parcial">
+												<div class="info">
 													<div class="nome">jQuery</div>
 													<div class="percentagem-num">95%</div>
 												</div>
@@ -159,7 +130,7 @@
 										<div class="candidatos">
 											<div class="parcial">
 												<div class="info">
-													<div class="nome">Bootstrap</div>
+													<div class="nome">Javascript</div>
 													<div class="percentagem-num">90%</div>
 												</div>
 												<div class="progressBar">
@@ -173,13 +144,97 @@
 										<div class="candidatos">
 											<div class="parcial">
 												<div class="info">
-													<div class="nome">Tailwind CSS</div>
-													<div class="percentagem-num">98%</div>
+													<div class="nome">CSS</div>
+													<div class="percentagem-num">90%</div>
 												</div>
 												<div class="progressBar">
 													<div
 														class="percentagem"
-														style="width: 98%"
+														style="width: 90%"
+													></div>
+												</div>
+											</div>
+										</div>
+										<div class="candidatos">
+											<div class="parcial">
+												<div class="info">
+													<div class="nome">Bootstrap</div>
+													<div class="percentagem-num">88%</div>
+												</div>
+												<div class="progressBar">
+													<div
+														class="percentagem"
+														style="width: 88%"
+													></div>
+												</div>
+											</div>
+										</div>
+										<div class="candidatos">
+											<div class="parcial">
+												<div class="info">
+													<div class="nome">React Native</div>
+													<div class="percentagem-num">80%</div>
+												</div>
+												<div class="progressBar">
+													<div
+														class="percentagem"
+														style="width: 80%"
+													></div>
+												</div>
+											</div>
+										</div>
+										<div class="candidatos">
+											<div class="parcial">
+												<div class="info">
+													<div class="nome">SQL</div>
+													<div class="percentagem-num">75%</div>
+												</div>
+												<div class="progressBar">
+													<div
+														class="percentagem"
+														style="width: 75%"
+													></div>
+												</div>
+											</div>
+										</div>
+										<div class="candidatos">
+											<div class="parcial">
+												<div class="info">
+													<div class="nome">Vue</div>
+													<div class="percentagem-num">60%</div>
+												</div>
+												<div class="progressBar">
+													<div
+														class="percentagem"
+														style="width: 60%"
+													></div>
+												</div>
+											</div>
+										</div>
+										<div class="candidatos">
+											<div class="parcial">
+												<div class="info">
+													<div class="nome">Laravel</div>
+													<div class="percentagem-num">50%</div>
+												</div>
+												<div class="progressBar">
+													<div
+														class="percentagem"
+														style="width: 50%"
+													></div>
+												</div>
+											</div>
+										</div>
+										<div class="candidatos">
+											<div class="parcial">
+												<div class="info">
+													<div class="nome">NodeJS</div>
+													<div class="percentagem-num">40%</div>
+												</div>
+												<div class="progressBar">
+													<div
+														class="percentagem"
+														style="width: 40%"
 													></div>
 												</div>
 											</div>
@@ -206,7 +261,7 @@
 									<li>
 										<div
 											class="mh-progress mh-progress-circle"
-											data-progress="70"
+											data-progress="80"
 										></div>
 										<div class="pr-skill-name">Team Work</div>
 									</li>
