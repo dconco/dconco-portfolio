@@ -1,6 +1,5 @@
 <?php
 
-use PhpSlides\Route;
 use PhpSlides\Foundation\Render;
 use PhpSlides\Loader\FileLoader;
 
@@ -14,9 +13,9 @@ include __DIR__ . '/../../vendor/autoload.php';
  * -----------------------------------------------------
  */
 (new FileLoader())
-	->safeLoad(__DIR__ . '/web.php')
-	->safeLoad(__DIR__ . '/api.php')
-	->safeLoad(__DIR__ . '/forms.php');
+ ->safeLoad(__DIR__ . '/web.php')
+ ->safeLoad(__DIR__ . '/api.php')
+ ->safeLoad(__DIR__ . '/forms.php');
 
 Render::FormsRoute();
 Render::ApiRoute();
