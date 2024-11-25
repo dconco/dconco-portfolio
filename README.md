@@ -1,8 +1,10 @@
 # PhpSlides
 
-[![Total Downloads](https://img.shields.io/packagist/dt/phpslides/framework)](https://packagist.org/packages/phpslides/framework)
-[![Latest Stable Version](https://img.shields.io/packagist/v/phpslides/framework)](https://packagist.org/packages/phpslides/framework)
-[![License](https://img.shields.io/packagist/l/phpslides/framework)](https://packagist.org/packages/phpslides/framework)
+<div align="center">
+   [![Total Downloads](https://img.shields.io/packagist/dt/phpslides/framework)](https://packagist.org/packages/phpslides/framework)
+   [![Latest Stable Version](https://img.shields.io/packagist/v/phpslides/framework)](https://packagist.org/packages/phpslides/framework)
+   [![License](https://img.shields.io/packagist/l/phpslides/framework)](https://packagist.org/packages/phpslides/framework)
+</div>
 
 Welcome to PhpSlides!
 
@@ -199,50 +201,31 @@ $user_id_route = route('user::1');
 
 Here's an overview of the project directory structure:
 
-project_root/
-
-├── app/
-
-│ ├── Forgery/
-
-│ ├── Guards/
-
-│ ├── Http/
-
-│ │ └── Api/
-
-│ │ └── Controller/
-
-├── public/
-
-├── src/
-
-│ ├── routes/
-
-│ ├── configs/
-
-│ ├── resources/
-
-│ │ └── views/
-
-├── vendor/
-
-├── .env
-
-├── .env.example
-
-├── .htaccess
-
-├── composer.json
-
-├── config.json
-
+project_root/<br>
+├── app/<br>
+│ ├── Forgery/<br>
+│ ├── Guards/<br>
+│ ├── Http/<br>
+│ │ └── Api/<br>
+│ │ └── Controller/<br>
+├── public/<br>
+├── src/<br>
+│ ├── routes/<br>
+│ ├── configs/<br>
+│ ├── resources/<br>
+│ │ └── views/<br>
+├── vendor/<br>
+├── .env<br>
+├── .env.example<br>
+├── .htaccess<br>
+├── composer.json<br>
+├── config.json<br>
 └── README.md
 
 ## Documentation
 
 For detailed documentation, including advanced usage,
-API references, and more, please visit our [documentation website](https://dconco.dev).
+API references, and more, please visit our [documentation website](s).
 
 ## Contributing
 
@@ -251,9 +234,9 @@ If you'd like to contribute,
 please follow these steps:
 
 1. Fork the repository.
-2. Create a new branch (git checkout -b name/your-feature).
-3. Commit your changes (git commit -am 'Add a new feature').
-4. Push to the branch (git push origin name/your-feature).
+2. Create a new branch (`git checkout -b name/your-feature`).
+3. Commit your changes (`git commit -am 'Add a new feature'`).
+4. Push to the branch (`git push origin name/your-feature`).
 5. Create a new Pull Request.
 
 ## License
