@@ -1,32 +1,33 @@
-<?
+<?php
 use PhpSlides\Props;
 $props = new Props();
 
 $keywords = [
-   'dconco',
-   'portfolio',
-   'programmer',
-   'dave conco',
-   'dconco portfolio',
-   'dconco developer',
-   'dconco programmer',
-   'software developer',
-   'fullstack developer'
+ 'dconco',
+ 'portfolio',
+ 'programmer',
+ 'dave conco',
+ 'dconco portfolio',
+ 'dconco developer',
+ 'dconco programmer',
+ 'software developer',
+ 'fullstack developer'
 ];
-$keywords = implode(', ', $keywords);
+
 $metaTitle = $props->metaTitle ?? $props->title;
+$keywords = implode(', ', $keywords);
 ?>
 
 <head>
-	<title>{{ Props('title') }}</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <title>{{ Props('title') }}</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=none" />
-   
-	<meta name="title" content="{{ $metaTitle }}" />
-	<meta name="developer" content="Dave Conco (dconco)" />
-	<meta name="keywords" content="{{ $keywords }}" />
-	<meta name="description" content="dconco - A creative fusion of coding expertise and diverse talents. A passionate software developer!" />
+
+   <meta name="title" content="{{ $metaTitle }}" />
+   <meta name="developer" content="Dave Conco (dconco)" />
+   <meta name="keywords" content="{{ $keywords }}" />
+   <meta name="description" content="dconco - A creative fusion of coding expertise and diverse talents. A passionate software developer!" />
    {{! OPEN GRAPH META TAGS !}}
    <meta property="og:title" content="{{ $metaTitle }}">
    <meta property="og:description" content="dconco - A creative fusion of coding expertise and diverse talents. A passionate software developer!">
@@ -39,37 +40,37 @@ $metaTitle = $props->metaTitle ?? $props->title;
    <meta name="twitter:description" content="dconco - A creative fusion of coding expertise and diverse talents. A passionate software developer!">
    <meta name="twitter:image" content="{{ asset('Assets::Images::Twitter.png') }}">
 
-	{{! FAV AND ICONS !}}
-	<link rel="icon" hreflang="en" href="{{ asset('::Favicon-16x16.png') }}" type="image/png" sizes="16x16" />
-	<link rel="icon" hreflang="en" href="{{ asset('::Favicon-32x32.png') }}" type="image/png" sizes="32x32" />
-	<link rel="icon" hreflang="en" href="{{ asset('::Favicon-64x64.png') }}" type="image/png" sizes="64x64" />
-	<link rel="shortcut icon" hreflang="en" href="{{ asset('::Favicon.ico') }}" type="image/x-icon" />
-	<link rel="apple-touch-icon" hreflang="en" href="{{ asset('::Apple-Touch-Icon.png') }}" type="image/png" sizes="180x180" />
+   {{! FAV AND ICONS !}}
+   <link rel="icon" hreflang="en" href="{{ asset('::Favicon-16x16.png') }}" type="image/png" sizes="16x16" />
+   <link rel="icon" hreflang="en" href="{{ asset('::Favicon-32x32.png') }}" type="image/png" sizes="32x32" />
+   <link rel="icon" hreflang="en" href="{{ asset('::Favicon-64x64.png') }}" type="image/png" sizes="64x64" />
+   <link rel="shortcut icon" hreflang="en" href="{{ asset('::Favicon.ico') }}" type="image/x-icon" />
+   <link rel="apple-touch-icon" hreflang="en" href="{{ asset('::Apple-Touch-Icon.png') }}" type="image/png" sizes="180x180" />
 
-	{{! Google Font !}}
-	<link hreflang="en" href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
-	{{! Font Awesome !}}
-	<link rel="stylesheet" hreflang="en" href="{{ asset('Assets::Icons::Font-Awesome-4.7.0::Css::Font-Awesome.min.css') }}" />
-	{{! Bootstrap CSS !}}
-	<link rel="stylesheet" hreflang="en" href="{{ asset('Assets::Plugins::Css::Bootstrap.min.css') }}" />
-	{{! Animate CSS !}}
-	<link rel="stylesheet" hreflang="en" href="{{ asset('Assets::plugins::Css::Animate.css') }}" />
-	{{! Owl Carousel CSS !}}
-	<link rel="stylesheet" hreflang="en" href="{{ asset('Assets::Plugins::Css::Owl.css') }}" />
-	{{! Fancybox !}}
-	<link rel="stylesheet" hreflang="en" href="{{ asset('Assets::Plugins::Css::Jquery.Fancybox.min.css') }}" />
+   {{! Google Font !}}
+   <link hreflang="en" href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+   {{! Font Awesome !}}
+   <link rel="stylesheet" hreflang="en" href="{{ asset('Assets::Icons::Font-Awesome-4.7.0::Css::Font-Awesome.min.css') }}" />
+   {{! Bootstrap CSS !}}
+   <link rel="stylesheet" hreflang="en" href="{{ asset('Assets::Plugins::Css::Bootstrap.min.css') }}" />
+   {{! Animate CSS !}}
+   <link rel="stylesheet" hreflang="en" href="{{ asset('Assets::plugins::Css::Animate.css') }}" />
+   {{! Owl Carousel CSS !}}
+   <link rel="stylesheet" hreflang="en" href="{{ asset('Assets::Plugins::Css::Owl.css') }}" />
+   {{! Fancybox !}}
+   <link rel="stylesheet" hreflang="en" href="{{ asset('Assets::Plugins::Css::Jquery.Fancybox.min.css') }}" />
 
-	{{! Custom CSS !}}
-	<link rel="stylesheet" hreflang="en" href="{{ asset('Assets::Css::Styles.css') }}" />
-	<link rel="stylesheet" hreflang="en" href="{{ asset('Assets::Css::Responsive.css') }}" />
+   {{! Custom CSS !}}
+   <link rel="stylesheet" hreflang="en" href="{{ asset('Assets::Css::Styles.css') }}" />
+   <link rel="stylesheet" hreflang="en" href="{{ asset('Assets::Css::Responsive.css') }}" />
 
-	{{! Colors !}}
-	<link rel="alternate stylesheet" hreflang="en" href="{{ asset('Assets::Css::Colors::Blue.css') }}" title="blue" />
-	<link rel="stylesheet" hreflang="en" href="{{ asset('Assets::Css::Colors::Defauld.css') }}" title="defauld" />
-	<link rel="alternate stylesheet" hreflang="en" href="{{ asset('Assets::Css::Colors::Green.css') }}" title="green" />
-	<link rel="alternate stylesheet" hreflang="en" href="{{ asset('Assets::Css::Colors::Blue-Munsell.css') }}" title="blue-munsell" />
-	<link rel="alternate stylesheet" hreflang="en" href="{{ asset('Assets::Css::Colors::Orange.css') }}" title="orange" />
-	<link rel="alternate stylesheet" hreflang="en" href="{{ asset('Assets::Css::Colors::Purple.css') }}" title="purple" />
-	<link rel="alternate stylesheet" hreflang="en" href="{{ asset('Assets::Css::Colors::Slate.css') }}" title="slate" />
-	<link rel="alternate stylesheet" hreflang="en" href="{{ asset('Assets::Css::Colors::Yellow.css') }}" title="yellow" />
+   {{! Colors !}}
+   <link rel="alternate stylesheet" hreflang="en" href="{{ asset('Assets::Css::Colors::Blue.css') }}" title="blue" />
+   <link rel="stylesheet" hreflang="en" href="{{ asset('Assets::Css::Colors::Defauld.css') }}" title="defauld" />
+   <link rel="alternate stylesheet" hreflang="en" href="{{ asset('Assets::Css::Colors::Green.css') }}" title="green" />
+   <link rel="alternate stylesheet" hreflang="en" href="{{ asset('Assets::Css::Colors::Blue-Munsell.css') }}" title="blue-munsell" />
+   <link rel="alternate stylesheet" hreflang="en" href="{{ asset('Assets::Css::Colors::Orange.css') }}" title="orange" />
+   <link rel="alternate stylesheet" hreflang="en" href="{{ asset('Assets::Css::Colors::Purple.css') }}" title="purple" />
+   <link rel="alternate stylesheet" hreflang="en" href="{{ asset('Assets::Css::Colors::Slate.css') }}" title="slate" />
+   <link rel="alternate stylesheet" hreflang="en" href="{{ asset('Assets::Css::Colors::Yellow.css') }}" title="yellow" />
 </head>
