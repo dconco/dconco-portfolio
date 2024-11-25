@@ -1,0 +1,53 @@
+{{! Start Loader !}}
+<div class="section-loader">
+	<div class="loader">
+		<div></div>
+		<div></div>
+	</div>
+</div>
+{{! End Loader !}}
+
+{{! NAVIGATION !}}
+<header class="black-bg mh-header mh-fixed-nav nav-scroll mh-xs-mobile-nav" id="mh-header">
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="row">
+			<nav class="navbar navbar-expand-lg mh-nav nav-btn">
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto ml-auto">
+						<li class="nav-item{{ Props('active') === 'index' ? ' active' : '' }}">
+							<a class="nav-link" href="{{ route('index::1') }}" onclick="$('.section-loader').fadeIn('slow')">Home</a>
+						</li>
+						<li class="nav-item{{ Props('active') === 'about' ? ' active' : '' }}">
+							<a class="nav-link" href="{{ route('about') }}" onclick="$('.section-loader').fadeIn('slow')">About</a>
+						</li>
+						<li class="nav-item{{ Props('active') === 'skills' ? ' active' : '' }}">
+							<a class="nav-link" href="{{ route('skills') }}" onclick="$('.section-loader').fadeIn('slow')">Skills</a>
+						</li>
+						<li class="nav-item{{ Props('active') === 'projects' ? ' active' : '' }}">
+							<a class="nav-link" href="{{ route('projects') }}" onclick="$('.section-loader').fadeIn('slow')">Projects</a>
+						</li>
+						<li class="nav-item{{ Props('active') === 'pricing' ? ' active' : '' }}">
+							<a class="nav-link" href="{{ route('pricing') }}" onclick="$('.section-loader').fadeIn('slow')">Pricing</a>
+						</li>
+						<li class="nav-item{{ Props('active') === 'contact' ? ' active' : '' }}">
+							<a class="nav-link" href="{{ route('contact') }}" onclick="$('.section-loader').fadeIn('slow')">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+</header>

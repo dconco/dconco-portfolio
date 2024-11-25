@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+   <!INCLUDES
+      path="components/Head"
+      title="dconco | about me full details"
+   />
+
+	<body class="dark-vertion black-bg">
+		<!INCLUDES path="components/Header" active="about" />
+		<!INCLUDES path="components/About" detailed=true />
+
+      <!--
+        ===================
+           SERVICE
+        ===================
+        -->
+      <section class="mh-service">
+      	<div class="container">
+      		<div class="row section-separator">
+      			<div
+      				class="col-sm-12 text-center section-title wow fadeInUp"
+      				data-wow-duration="0.8s"
+      				data-wow-delay="0.2s"
+      			>
+      				<h2>What I do</h2>
+      			</div>
+      			<div class="col-sm-4">
+      				<div
+      					class="mh-service-item shadow-1 dark-bg wow fadeInUp"
+      					data-wow-duration="0.8s"
+      					data-wow-delay="0.3s"
+      				>
+      					<i class="fa fa-android purple-color"></i>
+      					<h3>Mobile Applications</h3>
+      					<p>I focus on creating seamless mobile experiences for both iOS and Android devices using React Native. My expertise includes:</p>
+
+					      <h6>Key Expertise</h6>
+      					<ul style="text-indent: 15px">
+      					   <li>&bull; &nbsp; Cross-platform development (iOS, Android) using React Native and Ionic</li>
+                        <li>&bull; &nbsp; Mobile app design and prototyping</li>
+                        <li>&bull; &nbsp; User interface (UI) and user experience (UX) optimization</li>
+                        <li>&bull; &nbsp; Integration with third-party APIs and services</li>
+                        <li>&bull; &nbsp; Push notifications and in-app messaging</li>
+                        <li>&bull; &nbsp; Mobile app security and performance optimization</li>
+      					</ul>
+      					<br>
+					      <h6>Services Offered</h6>
+      					<ul style="text-indent: 15px">
+                        <li>&bull; &nbsp; Custom mobile app development</li>
+                        <li>&bull; &nbsp; Mobile app modernization and migration</li>
+                        <li>&bull; &nbsp; App store optimization (ASO)</li>
+                        <li>&bull; &nbsp; Mobile app testing and quality assurance</li>
+                        <li>&bull; &nbsp; Maintenance and support</li>
+      					</ul>
+      					<br>
+					      <h6>Technologies Used</h6>
+      					<ul style="text-indent: 15px">
+         					<li>&bull; &nbsp; React Native</li>
+         					<li>&bull; &nbsp; Expo</li>
+         					<li>&bull; &nbsp; Ionic</li>
+         					<li>&bull; &nbsp; Firebase</li>
+         					<li>&bull; &nbsp; RESTful APIs</li>
+      					</ul>
+      					<br>
+					      <h6>Get Started</h6>
+					      <p>Ready to bring your mobile app idea to life? Let's discuss your project and create a stunning mobile experience together!</p>
+
+               		<div style="display:flex; justify-content:center;">
+               			<a
+            					href="{{ route('contact') }}"
+            					class="btn wow fadeInUp"
+            					data-wow-duration="0.8s"
+            					data-wow-delay="0.4s"
+            					onclick="$('.section-loader').fadeIn('slow')"
+            					>Contact me &nbsp;<i class="fa fa-arrow-circle-o-right"></i
+            				></a>
+         				</div>
+      			   </div>
+      			</div>
+      			<div class="col-sm-4">
+      				<div
+      					class="mh-service-item shadow-1 dark-bg wow fadeInUp"
+      					data-wow-duration="0.8s"
+      					data-wow-delay="0.5s"
+      				>
+      					<i class="fa fa-globe sky-color"></i>
+      					<h3>Web Development</h3>
+      					<p>I specialize in designing and developing responsive, scalable, and secure websites that meet your business needs.</p>
+
+					      <h6>Key Expertise</h6>
+      					<ul style="text-indent: 15px">
+      					   <li>&bull; &nbsp; Front-end development using HTML5, CSS3, JavaScript, and React</li>
+      					   <li>&bull; &nbsp; Back-end development using PHP, PhpSlides and Laravel</li>
+      					   <li>&bull; &nbsp; Responsive web design and mobile-first development</li>
+      					   <li>&bull; &nbsp; Website optimization for search engines (SEO)</li>
+      					   <li>&bull; &nbsp; Website security and performance optimization</li>
+      					</ul>
+      					<br />
+					      <h6>Services Offered</h6>
+      					<ul style="text-indent: 15px">
+      					   <li>&bull; &nbsp; Custom website design and development</li>
+      					   <li>&bull; &nbsp; Website redesign and migration</li>
+      					   <li>&bull; &nbsp; Website maintenance and support</li>
+      					   <li>&bull; &nbsp; Content Management Systems (CMS)</li>
+      					   <li>&bull; &nbsp; E-commerce solutions</li>
+      					</ul>
+      					<br />
+					      <h6>Technologies Used</h6>
+      					<ul style="text-indent: 15px">
+      					   <li>&bull; &nbsp; <b>Programming languages:</b> HTML, CSS, JavaScript</li>
+      					   <li>&bull; &nbsp; <b>Frameworks:</b> Bootstrap, Tailwindcss, ReactJS, Vue</li>
+      					   <li>&bull; &nbsp; <b>Databases:</b> MySQL, MongoDB</li>
+      					</ul>
+      					<br>
+					      <h6>Get Started</h6>
+					      <p>Ready to bring your website project to life? Let's discuss your requirements and create a stunning website together!</p>
+
+               		<div style="display:flex; justify-content:center;">
+               			<a
+            					href="{{ route('contact') }}"
+            					class="btn wow fadeInUp"
+            					data-wow-duration="0.8s"
+            					data-wow-delay="0.4s"
+            					onclick="$('.section-loader').fadeIn('slow')"
+            					>Contact me &nbsp;<i class="fa fa-arrow-circle-o-right"></i
+            				></a>
+         				</div>
+      				</div>
+      			</div>
+      			<div class="col-sm-4">
+      				<div
+      					class="mh-service-item shadow-1 dark-bg wow fadeInUp"
+      					data-wow-duration="0.8s"
+      					data-wow-delay="0.7s"
+      				>
+      					<i class="fa fa-code iron-color"></i>
+      					<h3>API Development</h3>
+      					<p>
+                        What is an API?
+                        <br />
+                        <br />
+                        An API (Application Programming Interface) is a bridge that connects different software systems, allowing them to share data and services.
+      					</p>
+
+					      <h6>Benefits of API Integration</h6>
+      					<ul style="text-indent: 15px">
+      					   <li>&bull; &nbsp; Improved efficiency</li>
+      					   <li>&bull; &nbsp; Enhanced customer experience</li>
+      					   <li>&bull; &nbsp; Increased revenue</li>
+      					   <li>&bull; &nbsp; Competitive advantage</li>
+      					</ul>
+      					<br />
+					      <h6>Services Offered</h6>
+      					<ul style="text-indent: 15px">
+      					   <li>&bull; &nbsp; API design and development</li>
+      					   <li>&bull; &nbsp; API integration and implementation</li>
+      					   <li>&bull; &nbsp; API security and compliance assessment</li>
+      					   <li>&bull; &nbsp; API performance optimization and tuning</li>
+      					   <li>&bull; &nbsp; API documentation and testing</li>
+      					</ul>
+      					<br />
+					      <h6>Technologies Used</h6>
+      					<ul style="text-indent: 15px">
+      					   <li>&bull; &nbsp; <b>API management platforms:</b> AWS API Gateway, Google Cloud Endpoints</li>
+      					   <li>&bull; &nbsp; <b>API design tools:</b> Swagger, Postman</li>
+      					   <li>&bull; &nbsp; <b>Programming languages:</b> PHP, PhpSlides, Laravel, Node.js</li>
+      					   <li>&bull; &nbsp; <b>API protocols:</b>REST, GraphQL</li>
+      					</ul>
+      					<br>
+					      <h6>Get Started</h6>
+					      <p>Ready to bring your API project to life? Let's discuss your requirements and implement a robust API together!</p>
+
+               		<div style="display:flex; justify-content:center;">
+               			<a
+            					href="{{ route('contact') }}"
+            					class="btn wow fadeInUp"
+            					data-wow-duration="0.8s"
+            					data-wow-delay="0.4s"
+            					onclick="$('.section-loader').fadeIn('slow')"
+            					>Contact me &nbsp;<i class="fa fa-arrow-circle-o-right"></i
+            				></a>
+         				</div>
+      				</div>
+      			</div>
+      		</div>
+      		
+      		<div class="row section-separator">
+      			<div class="col-sm-4">
+      				<div
+      					class="mh-service-item shadow-1 dark-bg wow fadeInUp"
+      					data-wow-duration="0.8s"
+      					data-wow-delay="0.3s"
+      				>
+      					<i class="fa fa-puzzle-piece purple-color"></i>
+      					<h3>How I Work</h3>
+      					<p>I take a structured approach to deliver high-quality solutions. Here's an overview of my workflow:</p>
+
+      					<ul style="text-indent: 15px">
+      					   <li>&bull; &nbsp; We start with a detailed discussion of your project goals and objectives, ensuring everyone is on the same page.</li>
+                        <li>&bull; &nbsp; With a clear plan in place, I write clean, efficient, and well-documented code to build your application or website.</li>
+                        <li>&bull; &nbsp; Next, I create visual representations of your project through wireframes and prototypes, bringing your vision to life.</li>
+                        <li>&bull; &nbsp; To ensure a seamless user experience, I conduct rigorous testing and quality assurance.</li>
+                        <li>&bull; &nbsp; Finally, I deploy your application or website and provide ongoing support to keep it running smoothly.</li>
+      					</ul>
+      			   </div>
+      			</div>
+      			<div class="col-sm-4">
+      				<div
+      					class="mh-service-item shadow-1 dark-bg wow fadeInUp"
+      					data-wow-duration="0.8s"
+      					data-wow-delay="0.5s"
+      				>
+      					<i class="fa fa-handshake-o sky-color"></i>
+      					<h3>Benefits of Working with Me</h3>
+      					<p>By partnering with me, you can expect:</p>
+
+      					<ul style="text-indent: 15px">
+      					   <li>&bull; &nbsp; Rapid development and deployment, getting your project to market quickly.</li>
+      					   <li>&bull; &nbsp; High-quality, scalable solutions that meet your evolving needs.</li>
+      					   <li>&bull; &nbsp; Cost-effective services, providing excellent value for your investment.</li>
+      					   <li>&bull; &nbsp; Ongoing support and maintenance, ensuring your application or website continues to thrive.</li>
+      					   <li>&bull; &nbsp; A collaborative approach, working closely with you to understand your vision and goals.</li>
+      					</ul>
+      				</div>
+      			</div>
+      			<div class="col-sm-4">
+      				<div
+      					class="mh-service-item shadow-1 dark-bg wow fadeInUp"
+      					data-wow-duration="0.8s"
+      					data-wow-delay="0.7s"
+      				>
+      					<i class="fa fa-trophy iron-color"></i>
+      					<h3>What to Expect</h3>
+      					<p>When working with me, you can expect a transparent and collaborative process. Here's what you can look forward to:</p>
+      					
+      					<ul style="text-indent: 15px">
+      					   <li>&bull; &nbsp; A collaborative approach to understanding your requirements, ensuring we're aligned on your project goals.</li>
+                        <li>&bull; &nbsp; Customized solutions tailored to your unique needs and objectives.</li>
+                        <li>&bull; &nbsp; Regular updates and progress tracking, keeping you informed every step of the way.</li>
+                        <li>&bull; &nbsp; Timely delivery and deployment, getting your project to market quickly and efficiently.</li>
+                        <li>&bull; &nbsp; Ongoing support and maintenance, providing peace of mind and ensuring your application or website continues to perform optimally.</li>
+      					</ul>
+      				</div>
+      			</div>
+      		</div>
+
+      		<div style="display:flex; justify-content:center">
+      			<a
+   					href="{{ route('skills') }}"
+   					class="btn btn-fill wow fadeInUp"
+   					data-wow-duration="0.8s"
+   					data-wow-delay="0.4s"
+   					onclick="$('.section-loader').fadeIn('slow')"
+   					>Check my skills &nbsp;<i class="fa fa-arrow-circle-o-right"></i
+   				></a>
+				</div>
+      	</div>
+      </section>
+
+      <!INCLUDES path="components/Copyright" />
+      <!INCLUDES path="components/JsFiles" />
+	</body>
+</html>
