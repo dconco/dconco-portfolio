@@ -1,6 +1,6 @@
 <!--
   ===================
-	  FOOTER 3
+     FOOTER 3
   ===================
   -->
 <footer class="mh-footer mh-footer-3" id="mh-contact">
@@ -76,7 +76,6 @@
                         <div class="row">
                            <div class="col-sm-12">
                               <input
-                                 name="name"
                                  class="contact-name form-control"
                                  id="name"
                                  type="text"
@@ -86,7 +85,6 @@
 
                            <div class="col-sm-12">
                               <input
-                                 name="name"
                                  class="contact-email form-control"
                                  id="L_name"
                                  type="text"
@@ -96,7 +94,6 @@
 
                            <div class="col-sm-12">
                               <input
-                                 name="name"
                                  class="contact-subject form-control"
                                  id="email"
                                  type="email"
