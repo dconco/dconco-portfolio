@@ -1,0 +1,72 @@
+<div
+   class="col-sm-12 col-md-6 wow fadeInUp"
+   data-wow-duration="0.8s"
+   data-wow-delay="0.2s">
+   <form
+      id="reviewForm"
+      method="POST"
+      action="/hello"
+      class="single-form quate-form wow fadeInUp"
+      data-toggle="validator">
+      <div
+         id="msgSubmit2"
+         class="h3 text-center hidden"></div>
+      <div class="row">
+         <div class="col-sm-12">
+            <input
+               name="avatar"
+               class="contact-name form-control"
+               id="get-avatar"
+               type="file"
+               hidden />
+            <input
+               class="contact-name form-control"
+               id="avatar"
+               type="button"
+               placeholder="Upload an Avatar"
+               required />
+         </div>
+
+         <div class="col-sm-12">
+            <input
+               name="name"
+               class="contact-email form-control"
+               id="r_name"
+               type="text"
+               placeholder="Full name"
+               required />
+         </div>
+
+         <div class="col-sm-12">
+            <input
+               name="name"
+               class="contact-subject form-control"
+               id="profile_link"
+               type="url"
+               placeholder="Your profile link"
+               required />
+         </div>
+
+         <div class="col-sm-12">
+            <textarea
+               class="contact-message"
+               id="r_message"
+               rows="6"
+               placeholder="Your review message"
+               required></textarea>
+         </div>
+
+         {{! Subject Button !}}
+         <div class="btn-form col-sm-12">
+            <button
+               type="submit"
+               class="btn btn-fill btn-block"
+               id="review-form-submit">
+               Add Review
+            </button>
+         </div>
+      </div>
+   </form>
+</div>
+<br />
+<br />
