@@ -9,7 +9,7 @@ final class ContactEndpoint extends ApiController
 {
    public function store (Request $req)
    {
-      return 'Hello';
+      return $req->body();
    }
 
    public function error (Request $req)
