@@ -1,10 +1,8 @@
 # PhpSlides
 
-<div align="center">
-   [![Total Downloads](https://img.shields.io/packagist/dt/phpslides/framework)](https://packagist.org/packages/phpslides/framework)
-   [![Latest Stable Version](https://img.shields.io/packagist/v/phpslides/framework)](https://packagist.org/packages/phpslides/framework)
-   [![License](https://img.shields.io/packagist/l/phpslides/framework)](https://packagist.org/packages/phpslides/framework)
-</div>
+[![Total Downloads](https://img.shields.io/packagist/dt/phpslides/framework)](https://packagist.org/packages/phpslides/framework)
+[![Latest Stable Version](https://img.shields.io/packagist/v/phpslides/framework)](https://packagist.org/packages/phpslides/framework)
+[![License](https://img.shields.io/packagist/l/phpslides/framework)](https://packagist.org/packages/phpslides/framework)
 
 Welcome to PhpSlides!
 
