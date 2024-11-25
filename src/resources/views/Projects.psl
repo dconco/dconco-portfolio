@@ -9,15 +9,15 @@
    <!INCLUDES path="components/Header" active="projects" />
 
    <!--
-		  ===================
-			 FEATURE PROJECTS
-		  ===================
-		  -->
+        ===================
+          FEATURE PROJECTS
+        ===================
+        -->
    <section class="mh-featured-project image-bg featured-img-one">
-      <div class="img-color-overlay">
+      <div class="">
          <div class="container">
             <div class="row section-separator">
-               <div class="col-sm-12 mb-5">
+               <div class="col-sm-12 mb-5 top-icon">
                   <div
                      class="hero-img wow fadeInUp"
                      data-wow-duration="0.8s"
@@ -46,7 +46,7 @@
                                  data-wow-duration="0.8s"
                                  data-wow-delay="0.2s">
                                  <img
-                                    src="/assets/images/p-2.png"
+                                    src="{{ import('../assets/images/p-2.png') }}"
                                     alt=""
                                     class="img-fluid" />
                               </div>
@@ -126,7 +126,7 @@
                                  data-wow-duration="0.8s"
                                  data-wow-delay="0.2s">
                                  <img
-                                    src="/assets/images/p-2.png"
+                                    src="{{ import('../assets/images/p-2.png') }}"
                                     alt=""
                                     class="img-fluid" />
                               </div>
@@ -206,7 +206,7 @@
                                  data-wow-duration="0.8s"
                                  data-wow-delay="0.2s">
                                  <img
-                                    src="/assets/images/p-2.png"
+                                    src="{{ import('../assets/images/p-2.png') }}"
                                     alt=""
                                     class="img-fluid" />
                               </div>

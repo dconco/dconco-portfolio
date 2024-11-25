@@ -9,15 +9,15 @@
    <!INCLUDES path="components/Header" active="skills" />
 
    <!--
-		  ===================
-			  SKILLS
-		  ===================
-		  -->
+        ===================
+           SKILLS
+        ===================
+        -->
    <section class="mh-skills" id="mh-skills">
       <div class="home-v-img">
          <div class="container">
             <div class="row section-separator">
-               <div class="col-sm-12 mb-5">
+               <div class="col-sm-12 mb-5 top-icon">
                   <div
                      class="hero-img wow fadeInUp"
                      data-wow-duration="0.8s"
@@ -254,7 +254,7 @@
                         <li>
                            <div
                               class="mh-progress mh-progress-circle"
-                              data-progress="97"></div>
+                              data-progress="99"></div>
                            <div class="pr-skill-name">API</div>
                         </li>
                      </ul>

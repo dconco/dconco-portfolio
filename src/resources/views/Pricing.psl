@@ -9,15 +9,15 @@
    <!INCLUDES path="components/Header" active="pricing" />
 
    <!--
-		  ===================
-			  PRICING
-		  ===================
-		  -->
+        ===================
+           PRICING
+        ===================
+        -->
    <section class="mh-pricing" id="mh-pricing">
       <div class="">
          <div class="container">
             <div class="row section-separator">
-               <div class="col-sm-12 mb-5">
+               <div class="col-sm-12 mb-5 top-icon">
                   <div
                      class="hero-img wow fadeInUp"
                      data-wow-duration="0.8s"
