@@ -3,7 +3,7 @@
 <!INCLUDES
    path="components/Head"
    title="dconco | my skills"
-   metaTitle="Dave Conco (dconco) | Software Developer" />
+   metaTitle="Dave Conco (dconco) | My programming skills" />
 
 <body class="dark-vertion black-bg">
    <!INCLUDES path="components/Header" active="skills" />

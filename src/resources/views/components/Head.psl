@@ -16,6 +16,7 @@ $keywords = [
 
 $metaTitle = $props->metaTitle ?? $props->title;
 $keywords = implode(', ', $keywords);
+$app_url = getenv('APP_URL');
 ?>
 
 <head>
@@ -31,14 +32,14 @@ $keywords = implode(', ', $keywords);
    {{! OPEN GRAPH META TAGS !}}
    <meta property="og:title" content="{{ $metaTitle }}">
    <meta property="og:description" content="dconco - A creative fusion of coding expertise and diverse talents. A passionate software developer!">
-   <meta property="og:image" content="{{ asset('Assets::Images::Facebook.png') }}">
-   <meta property="og:url" content="https://dconco.dev">
+   <meta property="og:image" content="{{$app_url}}/apple-touch-icon.png">
+   <meta property="og:url" content="{{$app_url}}">
    <meta property="og:type" content="website">
    {{! TWITTER CARD OPTIONAL !}}
    <meta name="twitter:card" content="summary_large_image">
    <meta name="twitter:title" content="{{ $metaTitle }}">
    <meta name="twitter:description" content="dconco - A creative fusion of coding expertise and diverse talents. A passionate software developer!">
-   <meta name="twitter:image" content="{{ asset('Assets::Images::Twitter.png') }}">
+   <meta name="twitter:image" content="{{$app_url}}/images/twitter.png">
 
    {{! FAV AND ICONS !}}
    <link rel="icon" hreflang="en" href="{{ asset('::Favicon-16x16.png') }}" type="image/png" sizes="16x16" />

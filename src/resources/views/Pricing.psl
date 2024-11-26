@@ -3,7 +3,7 @@
 <!INCLUDES
    path="components/Head"
    title="dconco | work arrangements pricing table"
-   metaTitle="Dave Conco (dconco) | Software Developer" />
+   metaTitle="Dave Conco (dconco) | Work arrangements pricing table" />
 
 <body class="dark-vertion black-bg">
    <!INCLUDES path="components/Header" active="pricing" />

@@ -107,8 +107,15 @@
             </div>
          </div>
 
-         {{!
-         <!INCLUDES path="./AddReviews" /> !}}
+         <div class="btn-form col-sm-12">
+            <button class="btn btn-fill btn-block" id="review-btn">
+               Give me a Review 🌟
+            </button>
+         </div>
+         
+         <br />
+         <br />
+         <!INCLUDES path="./AddReviews" />
       </div>
    </div>
 </section>

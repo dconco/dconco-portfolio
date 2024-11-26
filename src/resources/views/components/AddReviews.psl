@@ -2,36 +2,18 @@
    class="col-sm-12 col-md-6 wow fadeInUp"
    data-wow-duration="0.8s"
    data-wow-delay="0.2s">
-   <form
-      id="reviewForm"
-      method="POST"
-      action="/hello"
-      class="single-form quate-form wow fadeInUp"
-      data-toggle="validator">
+      <form
+         id="reviewForm"
+         class="single-form quate-form wow fadeInUp"
+         data-toggle="validator">
       <div
-         id="msgSubmit2"
+         id="reviewMsgSubmit"
          class="h3 text-center hidden"></div>
       <div class="row">
          <div class="col-sm-12">
             <input
-               name="avatar"
-               class="contact-name form-control"
-               id="get-avatar"
-               type="file"
-               hidden />
-            <input
-               class="contact-name form-control"
-               id="avatar"
-               type="button"
-               placeholder="Upload an Avatar"
-               required />
-         </div>
-
-         <div class="col-sm-12">
-            <input
-               name="name"
+               name="fullname"
                class="contact-email form-control"
-               id="r_name"
                type="text"
                placeholder="Full name"
                required />
@@ -39,18 +21,33 @@
 
          <div class="col-sm-12">
             <input
-               name="name"
+               name="profile_url"
                class="contact-subject form-control"
-               id="profile_link"
                type="url"
                placeholder="Your profile link"
                required />
          </div>
+         
+         <input
+            name="avatar"
+            id="avatar"
+            type="file"
+            accept="image/*"
+            required
+            hidden />
+         
+         <div class="col-sm-12">
+            <input
+               class="contact-name form-control"
+               id="select-avatar"
+               type="text"
+               placeholder="Select an Avatar" />
+         </div>
 
          <div class="col-sm-12">
             <textarea
+               name="message"
                class="contact-message"
-               id="r_message"
                rows="6"
                placeholder="Your review message"
                required></textarea>
