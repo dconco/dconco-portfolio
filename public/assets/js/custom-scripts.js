@@ -351,13 +351,13 @@
             firstname: name,
             lastname: l_name,
         };
+        $("#form-submit").attr('disabled', 'true').text('Please wait...');
 
         $.ajax({
             type: "POST",
             url: "/api/v1/contact",
             data: JSON.stringify(formData),
             success: function(text) {
-                console.log(text);
                 if (text == "success") {
                     formSuccess();
                 } else {
@@ -367,7 +367,7 @@
             },
             error: function(err) {
                 formError();
-                submitMSG(false, err.responseText);
+                submitMSG(false, err.status + ' - ' + err.statusText);
             },
         });
     }
@@ -390,11 +390,13 @@
     }
 
     function submitMSG(valid, msg) {
+       console.log(msg)
         if (valid) {
             var msgClasses = "h3 text-center fadeInUp animated text-success";
         } else {
             var msgClasses = "h3 text-center shake animated text-danger";
         }
         $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
+        $("#form-submit").removeAttr('disabled').text('Send Message');
     }
 })(jQuery);

@@ -1,0 +1,79 @@
+<? [$name, $email, $message] = Props() ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		head, body {
+			background-color: #f2f2f2;
+		}
+		
+		* {
+			font-size: 16px;
+			font-family: Arial, sans-serif;
+		}
+		
+		.container {
+			width: 600px;
+			margin: 40px auto;
+			background-color: #fff;
+			padding: 20px;
+			border: 1px solid #ddd;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+		}
+		
+		.header {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			display: flex;
+			gap: 10px;
+			justify-content: center;
+			border-radius: 10px 10px 0 0;
+		}
+		
+		.header img {
+		   width: 50px;
+		}
+		
+		a {
+		   color: wheat;
+		   font-weight: bold;
+		}
+		
+		.quote {
+		   font-weight: bold;
+		   font-size: 25px;
+		}
+		
+		.footer {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			border-radius: 0 0 10px 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="header">
+			<img src="cid:icon" alt="" />
+		   <a href="https://dconco.dev"><h2>dconco.dev</h2></a>
+		</div>
+		<div class="content">
+			<p>Dear dconco,</p>
+			<p>You've received a new message from {{$name}} - <a href="mailto:{{$email}}">{{$email}}</a> via <a href="https://dconco.dev">dconco.dev</a> official website.</p>
+		   <p class="quote">“</p>
+			<span>{{$message}}</span>
+		   <p class="quote">”</p>
+			<p>Best regards,</p>
+			<p>dconco.</p>
+		</div>
+		<div class="footer">
+			<p>&copy; dconco {{ date('Y') }}</p>
+		</div>
+	</div>
+</body>
+</html>

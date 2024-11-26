@@ -1,7 +1,4 @@
 <?php
-/**
- * @format
- */
 
 use PhpSlides\{Route, view};
 
