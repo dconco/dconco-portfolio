@@ -70,7 +70,7 @@
 			<p>You've received a new message from {{$name}} - <a href="mailto:{{$email}}">{{$email}}</a> via <a href="https://dconco.dev">dconco.dev</a> official website.</p>
 	      <p class="quote">“</p>
 			<span>{{$message}}</span>
-	      <P class="quote">”</P>
+	      <p class="quote">”</p>
 			<p>Best regards,</p>
 			<p>dconco.</p>
 		</div>
