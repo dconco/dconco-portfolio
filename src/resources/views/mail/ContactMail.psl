@@ -28,18 +28,21 @@
 			color: #fff;
 			padding: 10px;
 			display: flex;
-			gap: 10px;
-			justify-content: center;
 			border-radius: 10px 10px 0 0;
 		}
 		
 		.header img {
 		   width: 50px;
+		   height: 50px;
+		   margin-right: 10px;
 		}
 		
 		a {
 		   color: wheat;
 		   font-weight: bold;
+		}
+		h2 a {
+		   font-size: 20px;
 		}
 		
 		.quote {
@@ -60,14 +63,14 @@
 	<div class="container">
 		<div class="header">
 			<img src="cid:icon" alt="" />
-		   <a href="https://dconco.dev"><h2>dconco.dev</h2></a>
+		   <h2><a href="https://dconco.dev">dconco.dev</a></h2>
 		</div>
 		<div class="content">
 			<p>Dear dconco,</p>
 			<p>You've received a new message from {{$name}} - <a href="mailto:{{$email}}">{{$email}}</a> via <a href="https://dconco.dev">dconco.dev</a> official website.</p>
-		   <p class="quote">“</p>
+	      <p class="quote">“</p>
 			<span>{{$message}}</span>
-		   <p class="quote">”</p>
+	      <P class="quote">”</P>
 			<p>Best regards,</p>
 			<p>dconco.</p>
 		</div>
