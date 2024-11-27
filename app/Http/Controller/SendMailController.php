@@ -31,7 +31,8 @@ final class SendMailController
 			# $mail->addBCC(getenv('SMTP_FROM'));
 
 			$mail->addEmbeddedImage(
-				dirname(dirname(dirname(__DIR__))) . '/src/resources/assets/logo.png',
+				dirname(dirname(dirname(__DIR__))) .
+					'/src/resources/assets/logo.png',
 				'icon',
 			);
 
@@ -56,7 +57,7 @@ final class SendMailController
 				return 'Email message could not be sent.';
 			}
 		} catch (Exception $e) {
-			return "Email message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+			return $mail->ErrorInfo;
 		}
 	}
 }

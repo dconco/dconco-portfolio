@@ -390,6 +390,7 @@
    }
 
    function submitMSG(valid, msg) {
+      console.log(msg);
       if (valid) {
          var msgClasses = "h3 text-center fadeInUp animated text-success";
       } else {

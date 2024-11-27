@@ -6,6 +6,7 @@ use PhpSlides\view;
 use PhpSlides\Http\Request;
 use PhpSlides\Http\ApiController;
 use App\Http\Controller\SendMailController;
+use Forgery\DconcoPortfolio\MailList\MailList;
 
 final class ContactEndpoint extends ApiController
 {
@@ -37,11 +38,39 @@ final class ContactEndpoint extends ApiController
 		if ($res !== true) {
 			return $res;
 		}
-		return 'success';
+
+		return $this->register($fullname, $email);
 	}
 
+	/**
+	 * Handle error request
+	 */
 	public function error(Request $req)
 	{
 		http_response_code(405);
+	}
+
+	/**
+	 * Register a new email information ℹ️
+	 */
+	private function register($fullname, $email)
+	{
+		if (MailList::$_connect_error) {
+			return 'Database connection refused';
+		}
+		MailList::static();
+
+		$mail = MailList::Search(
+			'SELECT * FROM mail_list WHERE email=%s',
+			$email,
+		);
+
+		$mail = $mail ?? new MailList();
+
+		$mail->email = $email;
+		$mail->fullname = $fullname;
+		$mail->Save();
+
+		return 'success';
 	}
 }
