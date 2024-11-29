@@ -289,16 +289,16 @@
         },
         {
             "name": "phpslides/framework",
-            "version": "v1.3.7",
+            "version": "v1.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhpSlides/framework.git",
-                "reference": "5e8436fd84ef7b0ab53ed9a4d819331a5b9ec226"
+                "reference": "137e11ebd29eed6485c1e32a4e1fc860862967f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhpSlides/framework/zipball/5e8436fd84ef7b0ab53ed9a4d819331a5b9ec226",
-                "reference": "5e8436fd84ef7b0ab53ed9a4d819331a5b9ec226",
+                "url": "https://api.github.com/repos/PhpSlides/framework/zipball/137e11ebd29eed6485c1e32a4e1fc860862967f5",
+                "reference": "137e11ebd29eed6485c1e32a4e1fc860862967f5",
                 "shasum": ""
             },
             "require": {
@@ -359,7 +359,7 @@
                     "type": "ko_fi"
                 }
             ],
-            "time": "2024-11-25T14:26:37+00:00"
+            "time": "2024-11-29T09:53:15+00:00"
         },
         {
             "name": "sergeytsalkov/meekrodb",
