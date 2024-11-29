@@ -1,12 +1,12 @@
-(function($) {
+(function ($) {
    "use strict";
 
-   $.fn.andSelf = function() {
+   $.fn.andSelf = function () {
       return this.addBack.apply(this, arguments);
    };
 
    /* Loader Code Start */
-   $(window).on("load", function() {
+   $(window).on("load", function () {
       $(".section-loader").fadeOut("slow");
 
       var $container = $(".portfolioContainer");
@@ -17,7 +17,7 @@
          },
       });
 
-      $(".portfolio-nav li").click(function() {
+      $(".portfolio-nav li").click(function () {
          $(".portfolio-nav .current").removeClass("current");
          $(this).addClass("current");
 
@@ -34,17 +34,17 @@
    /* Loader Code End */
 
    /*
-          |====================
-          | Mobile NAv trigger
-          |=====================
-          */
+                       |====================
+                       | Mobile NAv trigger
+                       |=====================
+                       */
 
    var trigger = $(".navbar-toggler"),
       overlay = $(".overlay"),
       navc = $(".navbar-collapse"),
       active = false;
 
-   $(".navbar-toggler, .navbar-nav li a, .overlay").on("click", function() {
+   $(".navbar-toggler, .navbar-nav li a, .overlay").on("click", function () {
       $(".navbar-toggler").toggleClass("active");
       //   $('#js-navbar-menu').toggleClass('active');
       //   $('.navbar-collapse').toggleClass('show');
@@ -53,10 +53,10 @@
    });
 
    /*
-          |=================
-          | Onepage Nav
-          |================
-          */
+                       |=================
+                       | Onepage Nav
+                       |================
+                       */
 
    $("#mh-header").onePageNav({
       currentClass: "active",
@@ -66,37 +66,37 @@
    });
 
    /*
-          |=================
-          | fancybox
-          |================
-          */
+                       |=================
+                       | fancybox
+                       |================
+                       */
 
    $("[data-fancybox]").fancybox({});
 
    /*
-          |===============
-          | WOW ANIMATION
-          |==================
-          */
+                       |===============
+                       | WOW ANIMATION
+                       |==================
+                       */
    var wow = new WOW({
       mobile: false, // trigger animations on mobile devices (default is true)
    });
    wow.init();
 
    /*
-          |=================
-          | AOS
-          |================
-          */
+                       |=================
+                       | AOS
+                       |================
+                       */
 
    //AOS.init();
 
    /*
-          | ==========================
-          | NAV FIXED ON SCROLL
-          | ==========================
-          */
-   $(window).on("scroll", function() {
+                       | ==========================
+                       | NAV FIXED ON SCROLL
+                       | ==========================
+                       */
+   $(window).on("scroll", function () {
       var scroll = $(window).scrollTop();
       if (scroll >= 50) {
          $(".nav-scroll").addClass("nav-strict");
@@ -106,11 +106,11 @@
    });
 
    /*
-          |=================
-          | Progress bar
-          |================
-          */
-   $(".determinate").each(function() {
+                       |=================
+                       | Progress bar
+                       |================
+                       */
+   $(".determinate").each(function () {
       var width = $(this).text();
       $(this)
          .css("width", width)
@@ -119,17 +119,17 @@
    });
 
    /*
-          |=================
-          | Portfolio mixin
-          |================
-          */
+                       |=================
+                       | Portfolio mixin
+                       |================
+                       */
    $("#portfolio-item").mixItUp();
 
    /*
-          |=================
-          | Client review
-          |================
-          */
+                       |=================
+                       | Client review
+                       |================
+                       */
    $("#mh-client-review").owlCarousel({
       loop: false,
       responsiveClass: true,
@@ -154,10 +154,10 @@
    });
 
    /*
-          |=================
-          | Project review slide
-          |================
-          */
+                       |=================
+                       | Project review slide
+                       |================
+                       */
    $(".mh-project-testimonial").owlCarousel({
       loop: true,
       responsiveClass: true,
@@ -184,10 +184,10 @@
    });
 
    /*
-          |=================
-          | Single Project review
-          |================
-          */
+                       |=================
+                       | Single Project review
+                       |================
+                       */
    $("#single-project").owlCarousel({
       loop: false,
       responsiveClass: true,
@@ -214,10 +214,10 @@
    });
 
    /*
-          |=================
-          | Project review slide
-          |================
-          */
+                       |=================
+                       | Project review slide
+                       |================
+                       */
    $(".mh-single-project-slide-by-side").owlCarousel({
       loop: false,
       responsiveClass: true,
@@ -248,10 +248,10 @@
    });
 
    /*
-          |=================
-          | Single client review
-          |================
-          */
+                       |=================
+                       | Single client review
+                       |================
+                       */
    $("#mh-single-client-review").owlCarousel({
       loop: false,
       responsiveClass: true,
@@ -276,10 +276,10 @@
    });
 
    /*
-          |=================
-          | Clint review slide
-          |================
-          */
+                       |=================
+                       | Clint review slide
+                       |================
+                       */
    $("#mh-2-client-review").owlCarousel({
       loop: false,
       responsiveClass: true,
@@ -320,14 +320,14 @@
    // });
 
    /*
-          |=================
-          | CONTACT FORM
-          |=================
-          */
+                       |=================
+                       | CONTACT FORM
+                       |=================
+                       */
 
    $("#contactForm")
       .validator()
-      .on("submit", function(event) {
+      .on("submit", function (event) {
          if (event.isDefaultPrevented()) {
             // handle the invalid form...
             formError();
@@ -351,13 +351,13 @@
          firstname: name,
          lastname: l_name,
       };
-      $("#form-submit").attr('disabled', 'true').text('Please wait...');
+      $("#form-submit").attr("disabled", "true").text("Please wait...");
 
       $.ajax({
          type: "POST",
          url: "/api/v1/contact",
          data: JSON.stringify(formData),
-         success: function(text) {
+         success: function (text) {
             if (text == "success") {
                formSuccess();
             } else {
@@ -365,9 +365,9 @@
                submitMSG(false, text);
             }
          },
-         error: function(err) {
+         error: function (err) {
             formError();
-            submitMSG(false, err.status + ' - ' + err.statusText);
+            submitMSG(false, err.status + " - " + err.statusText);
          },
       });
    }
@@ -383,7 +383,7 @@
          .addClass("shake animated")
          .one(
             "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
-            function() {
+            function () {
                $(this).removeClass();
             }
          );
@@ -397,31 +397,33 @@
          var msgClasses = "h3 text-center shake animated text-danger";
       }
       $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
-      $("#form-submit").removeAttr('disabled').text('Send Message');
+      $("#form-submit").removeAttr("disabled").text("Send Message");
    }
 
    /*
-          |=================
-          | ADD REVIEW FORM
-          |=================
-          */
+                       |=================
+                       | ADD REVIEW FORM
+                       |=================
+                       */
    $("#select-avatar").on("focus", () => {
-      $("#select-avatar").blur()
-      $("#avatar").click()
-   })
-   
+      $("#select-avatar").blur();
+      $("#avatar").click();
+   });
+
    $("#avatar").on("change", () => {
-      $("#select-avatar").val($("#avatar").val())
-   })
+      $("#select-avatar").val($("#avatar").val());
+   });
 
    $("#reviewForm")
       .validator()
-      .on("submit", function(event) {
+      .on("submit", function (event) {
+         console.log(event);
          if (event.isDefaultPrevented()) {
             // handle the invalid form...
             reviewFormError();
             submitReviewMSG(false, "Did you fill in the form properly?");
          } else {
+            alert();
             // everything looks good!
             event.preventDefault();
             submitReviewForm();
@@ -429,14 +431,14 @@
       });
 
    function submitReviewForm() {
-      let formData = new FormData($("#reviewForm")[0])
-      $("#review-form-submit").attr('disabled', 'true').text('Please wait...');
+      let formData = new FormData($("#reviewForm")[0]);
+      $("#review-form-submit").attr("disabled", "true").text("Please wait...");
 
       $.ajax({
          type: "POST",
          url: "/api/v1/contact",
          data: formData,
-         success: function(text) {
+         success: function (text) {
             if (text == "success") {
                reviewFormSuccess();
             } else {
@@ -444,9 +446,9 @@
                submitReviewMSG(false, text);
             }
          },
-         error: function(err) {
+         error: function (err) {
             reviewFormError();
-            submitReviewMSG(false, err.status + ' - ' + err.statusText);
+            submitReviewMSG(false, err.status + " - " + err.statusText);
          },
       });
    }
@@ -462,7 +464,7 @@
          .addClass("shake animated")
          .one(
             "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
-            function() {
+            function () {
                $(this).removeClass();
             }
          );
@@ -475,6 +477,6 @@
          var msgClasses = "h3 text-center shake animated text-danger";
       }
       $("#reviewMsgSubmit").removeClass().addClass(msgClasses).text(msg);
-      $("#review-form-submit").removeAttr('disabled').text('Add Review');
+      $("#review-form-submit").removeAttr("disabled").text("Add Review");
    }
 })(jQuery);

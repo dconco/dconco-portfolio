@@ -2,10 +2,9 @@
    class="col-sm-12 col-md-6 wow fadeInUp"
    data-wow-duration="0.8s"
    data-wow-delay="0.2s">
-      <form
-         id="reviewForm"
-         class="single-form quate-form wow fadeInUp"
-         data-toggle="validator">
+   <form
+      id="reviewForm"
+      class="single-form quate-form wow fadeInUp">
       <div
          id="reviewMsgSubmit"
          class="h3 text-center hidden"></div>
@@ -27,7 +26,7 @@
                placeholder="Your profile link"
                required />
          </div>
-         
+
          <input
             name="avatar"
             id="avatar"
@@ -35,7 +34,7 @@
             accept="image/*"
             required
             hidden />
-         
+
          <div class="col-sm-12">
             <input
                class="contact-name form-control"
@@ -43,6 +42,8 @@
                type="text"
                placeholder="Select an Avatar" />
          </div>
+
+
 
          <div class="col-sm-12">
             <textarea

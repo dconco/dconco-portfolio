@@ -1,18 +1,20 @@
-<? [$name, $email, $message] = Props() ?>
+<? [ $name, $email, $message ] = Props() ?>
 
 <!DOCTYPE html>
 <html>
+
 <head>
 	<style>
-		head, body {
+		head,
+		body {
 			background-color: #f2f2f2;
 		}
-		
+
 		* {
 			font-size: 16px;
 			font-family: Arial, sans-serif;
 		}
-		
+
 		.container {
 			width: 600px;
 			margin: 40px auto;
@@ -20,9 +22,9 @@
 			padding: 20px;
 			border: 1px solid #ddd;
 			border-radius: 10px;
-			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 		}
-		
+
 		.header {
 			background-color: #333;
 			color: #fff;
@@ -30,27 +32,29 @@
 			display: flex;
 			border-radius: 10px 10px 0 0;
 		}
-		
+
 		.header img {
-		   width: 50px;
-		   height: 50px;
-		   margin-right: 10px;
+			width: 50px;
+			height: 50px;
+			margin-right: 10px;
 		}
-		
+
 		a {
-		   color: wheat;
-		   font-weight: bold;
+			color: wheat;
+			font-weight: bold;
 		}
+
 		h2 a {
-		   font-size: 20px;
+			font-size: 20px;
 		}
-		
+
 		.quote {
-		   font-weight: bold;
-		   font-size: 25px;
+			font-weight: bold;
+			font-size: 25px;
 		}
-		
+
 		.footer {
+			text-align: center;
 			background-color: #333;
 			color: #fff;
 			padding: 10px;
@@ -63,14 +67,14 @@
 	<div class="container">
 		<div class="header">
 			<img src="cid:icon" alt="" />
-		   <h2><a href="https://dconco.dev">dconco.dev</a></h2>
+			<h2><a href="https://dconco.dev">dconco.dev</a></h2>
 		</div>
 		<div class="content">
 			<p>Dear dconco,</p>
 			<p>You've received a new message from {{$name}} - <a href="mailto:{{$email}}">{{$email}}</a> via <a href="https://dconco.dev">dconco.dev</a> official website.</p>
-	      <p class="quote">“</p>
+			<p class="quote">“</p>
 			<span>{{$message}}</span>
-	      <p class="quote">”</p>
+			<p class="quote">”</p>
 			<p>Best regards,</p>
 			<p>dconco.</p>
 		</div>
@@ -79,4 +83,5 @@
 		</div>
 	</div>
 </body>
+
 </html>
