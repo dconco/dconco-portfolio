@@ -12,12 +12,19 @@ final class ContactEndpoint extends ApiController
 {
 	public function store (Request $req)
 	{
-		$f_name = $req->body('firstname');
-		$l_name = $req->body('lastname');
-		$email = $req->body('email');
-		$message = $req->body('message');
+		extract($req->body());
+		http_response_code(400);
 
-		$fullname = "$f_name $l_name";
+		if (!$firstname || !$lastname || !$email || !$message)
+		{
+			return 'Invalid request body!';
+		}
+		if (!filter_var($email, filter: FILTER_VALIDATE_EMAIL))
+		{
+			return 'Enter a valid email address';
+		}
+
+		$fullname = "$firstname $lastname";
 
 		$res = SendMailController::send(
 		 to: $email,
@@ -59,6 +66,7 @@ final class ContactEndpoint extends ApiController
 	{
 		if (MailList::$_connect_error)
 		{
+			http_response_code(500);
 			return 'Database connection refused';
 		}
 		MailList::static();
@@ -68,12 +76,13 @@ final class ContactEndpoint extends ApiController
 		 $email,
 		);
 
-		$mail = $mail ?? new MailList();
+		$mail ??= new MailList();
 
 		$mail->email = $email;
 		$mail->fullname = $fullname;
 		$mail->Save();
 
+		http_response_code(200);
 		return 'success';
 	}
 }
