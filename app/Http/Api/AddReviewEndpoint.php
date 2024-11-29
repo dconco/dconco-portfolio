@@ -9,6 +9,13 @@ final class AddReviewEndpoint extends ApiController
 {
    public function store (Request $req)
    {
-      return $req->body();
+      extract($req->post());
+
+      if (!$fullname || !$profile_url || !$message || !$req->files('avatar'))
+      {
+         return 'Invalid request body!';
+      }
+
+      return $req->post();
    }
 }

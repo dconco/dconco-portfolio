@@ -4,6 +4,7 @@
    data-wow-duration="0.8s"
    data-wow-delay="0.2s">
    <form
+      enctype="multipart/form-data"
       id="reviewForm"
       class="single-form quate-form wow fadeInUp">
       <div
