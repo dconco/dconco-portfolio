@@ -50,7 +50,8 @@
                name="message"
                class="contact-message"
                rows="6"
-               placeholder="Your review message"
+               maxlength="255"
+               placeholder="Your review message (1-255 characters)"
                required></textarea>
          </div>
 
