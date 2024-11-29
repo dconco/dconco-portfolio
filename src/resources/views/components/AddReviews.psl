@@ -43,8 +43,6 @@
                placeholder="Select an Avatar" />
          </div>
 
-
-
          <div class="col-sm-12">
             <textarea
                name="message"
