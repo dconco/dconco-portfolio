@@ -34,10 +34,10 @@
    /* Loader Code End */
 
    /*
-                       |====================
-                       | Mobile NAv trigger
-                       |=====================
-                       */
+                             |====================
+                             | Mobile NAv trigger
+                             |=====================
+                             */
 
    var trigger = $(".navbar-toggler"),
       overlay = $(".overlay"),
@@ -53,10 +53,10 @@
    });
 
    /*
-                       |=================
-                       | Onepage Nav
-                       |================
-                       */
+                             |=================
+                             | Onepage Nav
+                             |================
+                             */
 
    $("#mh-header").onePageNav({
       currentClass: "active",
@@ -66,36 +66,36 @@
    });
 
    /*
-                       |=================
-                       | fancybox
-                       |================
-                       */
+                             |=================
+                             | fancybox
+                             |================
+                             */
 
    $("[data-fancybox]").fancybox({});
 
    /*
-                       |===============
-                       | WOW ANIMATION
-                       |==================
-                       */
+                             |===============
+                             | WOW ANIMATION
+                             |==================
+                             */
    var wow = new WOW({
       mobile: false, // trigger animations on mobile devices (default is true)
    });
    wow.init();
 
    /*
-                       |=================
-                       | AOS
-                       |================
-                       */
+                             |=================
+                             | AOS
+                             |================
+                             */
 
    //AOS.init();
 
    /*
-                       | ==========================
-                       | NAV FIXED ON SCROLL
-                       | ==========================
-                       */
+                             | ==========================
+                             | NAV FIXED ON SCROLL
+                             | ==========================
+                             */
    $(window).on("scroll", function () {
       var scroll = $(window).scrollTop();
       if (scroll >= 50) {
@@ -106,10 +106,10 @@
    });
 
    /*
-                       |=================
-                       | Progress bar
-                       |================
-                       */
+                             |=================
+                             | Progress bar
+                             |================
+                             */
    $(".determinate").each(function () {
       var width = $(this).text();
       $(this)
@@ -119,17 +119,17 @@
    });
 
    /*
-                       |=================
-                       | Portfolio mixin
-                       |================
-                       */
+                             |=================
+                             | Portfolio mixin
+                             |================
+                             */
    $("#portfolio-item").mixItUp();
 
    /*
-                       |=================
-                       | Client review
-                       |================
-                       */
+                             |=================
+                             | Client review
+                             |================
+                             */
    $("#mh-client-review").owlCarousel({
       loop: false,
       responsiveClass: true,
@@ -154,10 +154,10 @@
    });
 
    /*
-                       |=================
-                       | Project review slide
-                       |================
-                       */
+                             |=================
+                             | Project review slide
+                             |================
+                             */
    $(".mh-project-testimonial").owlCarousel({
       loop: true,
       responsiveClass: true,
@@ -184,10 +184,10 @@
    });
 
    /*
-                       |=================
-                       | Single Project review
-                       |================
-                       */
+                             |=================
+                             | Single Project review
+                             |================
+                             */
    $("#single-project").owlCarousel({
       loop: false,
       responsiveClass: true,
@@ -214,10 +214,10 @@
    });
 
    /*
-                       |=================
-                       | Project review slide
-                       |================
-                       */
+                             |=================
+                             | Project review slide
+                             |================
+                             */
    $(".mh-single-project-slide-by-side").owlCarousel({
       loop: false,
       responsiveClass: true,
@@ -248,10 +248,10 @@
    });
 
    /*
-                       |=================
-                       | Single client review
-                       |================
-                       */
+                             |=================
+                             | Single client review
+                             |================
+                             */
    $("#mh-single-client-review").owlCarousel({
       loop: false,
       responsiveClass: true,
@@ -276,10 +276,10 @@
    });
 
    /*
-                       |=================
-                       | Clint review slide
-                       |================
-                       */
+                             |=================
+                             | Clint review slide
+                             |================
+                             */
    $("#mh-2-client-review").owlCarousel({
       loop: false,
       responsiveClass: true,
@@ -320,10 +320,10 @@
    // });
 
    /*
-                       |=================
-                       | CONTACT FORM
-                       |=================
-                       */
+                             |=================
+                             | CONTACT FORM
+                             |=================
+                             */
 
    $("#contactForm")
       .validator()
@@ -401,10 +401,10 @@
    }
 
    /*
-                       |=================
-                       | ADD REVIEW FORM
-                       |=================
-                       */
+                             |=================
+                             | ADD REVIEW FORM
+                             |=================
+                             */
    $("#select-avatar").on("focus", () => {
       $("#select-avatar").blur();
       $("#avatar").click();
@@ -417,13 +417,11 @@
    $("#reviewForm")
       .validator()
       .on("submit", function (event) {
-         console.log(event);
          if (event.isDefaultPrevented()) {
             // handle the invalid form...
             reviewFormError();
             submitReviewMSG(false, "Did you fill in the form properly?");
          } else {
-            alert();
             // everything looks good!
             event.preventDefault();
             submitReviewForm();
@@ -436,7 +434,7 @@
 
       $.ajax({
          type: "POST",
-         url: "/api/v1/contact",
+         url: "/api/v1/review/add",
          data: formData,
          success: function (text) {
             if (text == "success") {

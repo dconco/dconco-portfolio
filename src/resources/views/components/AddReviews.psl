@@ -1,5 +1,6 @@
 <div
    class="col-sm-12 col-md-6 wow fadeInUp"
+   id="review-container"
    data-wow-duration="0.8s"
    data-wow-delay="0.2s">
    <form
@@ -23,7 +24,7 @@
                name="profile_url"
                class="contact-subject form-control"
                type="url"
-               placeholder="Your profile link"
+               placeholder="Your social media link"
                required />
          </div>
 
@@ -40,7 +41,7 @@
                class="contact-name form-control"
                id="select-avatar"
                type="text"
-               placeholder="Select an Avatar" />
+               placeholder="Select an avatar" />
          </div>
 
          <div class="col-sm-12">
@@ -63,6 +64,6 @@
          </div>
       </div>
    </form>
+   <br />
+   <br />
 </div>
-<br />
-<br />
