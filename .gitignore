@@ -15,5 +15,4 @@
 log
 *.log
 access_log
-composer.lock
 composer.phar

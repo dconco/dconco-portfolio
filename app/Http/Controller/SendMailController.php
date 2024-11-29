@@ -2,16 +2,16 @@
 
 namespace App\Http\Controller;
 
-use PhpSlides\Http\Request;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
 
 final class SendMailController
 {
-	public static function send($to, $subject, $body, $altBody = ''): string|bool
+	public static function send ($to, $subject, $body, $altBody = ''): string|bool
 	{
 		$mail = new PHPMailer(true); # Passing `true` enables exceptions
-		try {
+		try
+		{
 			# Server settings
 			$mail->isSMTP(); # Set mailer to use SMTP
 			$mail->Host = getenv('SMTP_HOST'); # Specify main and backup SMTP servers
@@ -31,9 +31,9 @@ final class SendMailController
 			# $mail->addBCC(getenv('SMTP_FROM'));
 
 			$mail->addEmbeddedImage(
-				dirname(dirname(dirname(__DIR__))) .
-					'/src/resources/assets/logo.png',
-				'icon',
+			 dirname(dirname(dirname(__DIR__))) .
+			  '/src/resources/assets/logo.png',
+			 'icon',
 			);
 
 			# Content
@@ -44,19 +44,24 @@ final class SendMailController
 			$mail->AltBody = $altBody;
 
 			$mail->SMTPOptions = [
-				'ssl' => [
-					'verify_peer' => false,
-					'verify_peer_name' => false,
-					'allow_self_signed' => false,
-				],
+			 'ssl' => [
+			  'verify_peer' => false,
+			  'verify_peer_name' => false,
+			  'allow_self_signed' => false,
+			 ],
 			];
 
-			if ($mail->send()) {
+			if ($mail->send())
+			{
 				return true;
-			} else {
+			}
+			else
+			{
 				return 'Email message could not be sent.';
 			}
-		} catch (Exception $e) {
+		}
+		catch ( Exception $e )
+		{
 			return $mail->ErrorInfo;
 		}
 	}
