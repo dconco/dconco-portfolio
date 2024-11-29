@@ -11,8 +11,9 @@ final class AddReviewEndpoint extends ApiController
    {
       extract($req->post());
       http_response_code(400);
+      $avatar = $req->files('avatar');
 
-      if (!$fullname || !$profile_url || !$message || !$req->files('avatar'))
+      if (!$fullname || !$profile_url || !$message || !$avatar)
       {
          return 'Invalid request body!';
       }
@@ -21,11 +22,37 @@ final class AddReviewEndpoint extends ApiController
          return 'Enter a valid URL';
       }
 
+      $this->validate_image($avatar);
+
+      $reviews_dir = getenv('__DIR__') . '/src/resources/uploads/reviews';
+      $new_file = $reviews_dir . '/' . time() . $avatar->name;
+
+      if (!is_dir($reviews_dir))
+      {
+         mkdir(directory: $reviews_dir, recursive: true);
+      }
+
+      if (!move_uploaded_file($avatar->tmp_name, $new_file))
+      {
+         return 'Error while uploading avatar';
+      }
+
       http_response_code(200);
+      return 'success';
+   }
 
-      $avatar = $req->files('avatar');
-      $name = $avatar->name;
+   protected function validate_image ($avatar)
+   {
+      $imgType = getimagesize($avatar->tmp_name);
 
-      return filetype($avatar);
+      if (!$imgType)
+      {
+         exit('Invalid image type');
+      }
+
+      if ($avatar->size > 1000000)
+      {
+         exit('Image size should be less than 1mb');
+      }
    }
 }
