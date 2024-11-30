@@ -4,9 +4,9 @@
    data-wow-duration="0.8s"
    data-wow-delay="0.2s">
    <form
-      enctype="multipart/form-data"
       id="reviewForm"
-      class="single-form quate-form wow fadeInUp">
+      class="single-form quate-form"
+      data-toggle="validator">
       <div
          id="reviewMsgSubmit"
          class="h3 text-center hidden"></div>
@@ -50,7 +50,7 @@
                name="message"
                class="contact-message"
                rows="6"
-               maxlength="255"
+               maxlength="240"
                placeholder="Your review message (1-255 characters)"
                required></textarea>
          </div>

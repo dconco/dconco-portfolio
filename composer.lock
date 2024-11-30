@@ -289,16 +289,16 @@
         },
         {
             "name": "phpslides/framework",
-            "version": "v1.3.8",
+            "version": "v1.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhpSlides/framework.git",
-                "reference": "137e11ebd29eed6485c1e32a4e1fc860862967f5"
+                "reference": "f91dab0ad5bf74f1ee7199a5671f29e8990cf927"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhpSlides/framework/zipball/137e11ebd29eed6485c1e32a4e1fc860862967f5",
-                "reference": "137e11ebd29eed6485c1e32a4e1fc860862967f5",
+                "url": "https://api.github.com/repos/PhpSlides/framework/zipball/f91dab0ad5bf74f1ee7199a5671f29e8990cf927",
+                "reference": "f91dab0ad5bf74f1ee7199a5671f29e8990cf927",
                 "shasum": ""
             },
             "require": {
@@ -359,7 +359,7 @@
                     "type": "ko_fi"
                 }
             ],
-            "time": "2024-11-29T09:53:15+00:00"
+            "time": "2024-11-29T17:37:02+00:00"
         },
         {
             "name": "sergeytsalkov/meekrodb",
@@ -738,12 +738,12 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.2"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }

@@ -105,16 +105,17 @@
                </div>
             </div>
          </div>
-
-         <div class="btn-form col-sm-12">
+         
+         <div style="margin:auto;width:50% min-width:150px">
             <button class="btn btn-fill btn-block" id="review-btn">
                Give me a Review 🌟
             </button>
          </div>
-
          <br />
-         <br />
-         <!INCLUDES path="./AddReviews" />
+         
+         <div class="row section-separator">
+            <!INCLUDES path="./AddReviews" />
+         </div>
       </div>
    </div>
 </section>

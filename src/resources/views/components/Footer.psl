@@ -68,7 +68,7 @@
                      data-wow-delay="0.2s">
                      <form
                         id="contactForm"
-                        class="single-form quate-form wow fadeInUp"
+                        class="single-form quate-form"
                         data-toggle="validator">
                         <div
                            id="msgSubmit"
@@ -116,7 +116,7 @@
                                  type="submit"
                                  class="btn btn-fill btn-block"
                                  id="form-submit">
-                                 Send Message
+                                 Send Message <i class="fa fa-inbox"></i>
                               </button>
                            </div>
                         </div>

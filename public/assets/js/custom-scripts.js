@@ -79,7 +79,7 @@
                                                   |==================
                                                   */
    var wow = new WOW({
-      mobile: false, // trigger animations on mobile devices (default is true)
+      mobile: true, // trigger animations on mobile devices (default is true)
    });
    wow.init();
 
@@ -320,11 +320,11 @@
    // });
 
    /*
-                                                  |=================
-                                                  | CONTACT FORM
-                                                  |=================
-                                                  */
-
+      |=================
+      | CONTACT FORM
+      |=================
+      */
+   
    $("#contactForm")
       .validator()
       .on("submit", function (event) {
@@ -367,7 +367,7 @@
          },
          error: function (err) {
             formError();
-            submitMSG(false, err.responseText || err.statusText);
+            submitMSG(false, err.status + ' - ' + err.responseText || err.statusText);
          },
       });
    }
@@ -390,21 +390,20 @@
    }
 
    function submitMSG(valid, msg) {
-      console.log(msg);
       if (valid) {
          var msgClasses = "h3 text-center fadeInUp animated text-success";
       } else {
          var msgClasses = "h3 text-center shake animated text-danger";
       }
       $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
-      $("#form-submit").removeAttr("disabled").text("Send Message");
+      $("#form-submit").removeAttr("disabled").html("Send Message <i class='fa fa-inbox'></i>");
    }
 
    /*
-                                                  |=================
-                                                  | ADD REVIEW FORM
-                                                  |=================
-                                                  */
+     |=================
+     | ADD REVIEW FORM
+     |=================
+     */
    $("#select-avatar").on("focus", () => {
       $("#select-avatar").blur();
       $("#avatar").click();
@@ -428,10 +427,31 @@
          }
       });
 
-   function submitReviewForm() {
+   async function submitReviewForm() {
       let formData = new FormData($("#reviewForm")[0]);
       $("#review-form-submit").attr("disabled", "true").text("Please wait...");
 
+      try {
+         let res = await fetch('/api/v1/review/add', {
+            method: 'POST',
+            data: formData
+         })
+         let text = await res.json();
+         console.log(text);
+
+         if (text == "success") {
+            reviewFormSuccess();
+         } else {
+            reviewFormError();
+            submitReviewMSG(false, text || res.statusText);
+         }
+      } catch (err) {
+         console.log(err);
+         reviewFormError();
+         submitReviewMSG(false, err.text() || err.statusText);
+      }
+      
+      /*
       $.ajax({
          type: "POST",
          url: "/api/v1/review/add",
@@ -448,9 +468,9 @@
          },
          error: function (err) {
             reviewFormError();
-            submitReviewMSG(false, err.responseText || err.statusText);
+            submitReviewMSG(false, err.status + ' - ' + err.responseText || err.statusText);
          },
-      });
+      });*/
    }
 
    function reviewFormSuccess() {
@@ -459,10 +479,8 @@
    }
 
    function reviewFormError() {
-      $("#reviewForm")
-         .removeClass()
-         .addClass("shake animated")
-         .one(
+      $("#reviewForm").removeClass().addClass("shake animated")
+      .one(
             "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
             function () {
                $(this).removeClass();
@@ -479,4 +497,13 @@
       $("#reviewMsgSubmit").removeClass().addClass(msgClasses).text(msg);
       $("#review-form-submit").removeAttr("disabled").text("Add Review");
    }
+   
+   /**
+    * REVIEW BUTTON
+    */
+   $('#review-container').hide()
+
+   $('#review-btn').on('click', () => {
+      $('#review-container').slideToggle()
+   })
 })(jQuery);
