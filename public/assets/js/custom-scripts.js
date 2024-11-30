@@ -432,45 +432,20 @@
       $("#review-form-submit").attr("disabled", "true").text("Please wait...");
 
       try {
-         let res = await fetch('/api/v1/review/add', {
-            method: 'POST',
-            data: formData
-         })
-         let text = await res.json();
-         console.log(text);
+         let { data, message } = await axios.post('/api/v1/review/add', formData, {
+            headers: { 'X-Requested-With': 'XMLHttpRequest' }
+         });
 
-         if (text == "success") {
+         if (data == "success") {
             reviewFormSuccess();
          } else {
             reviewFormError();
-            submitReviewMSG(false, text || res.statusText);
+            submitReviewMSG(false, data.exception || data || message);
          }
-      } catch (err) {
-         console.log(err);
+      } catch ({ response, message }) {
          reviewFormError();
-         submitReviewMSG(false, err.text() || err.statusText);
+         submitReviewMSG(false, response.data.exception || response.data || message);
       }
-      
-      /*
-      $.ajax({
-         type: "POST",
-         url: "/api/v1/review/add",
-         data: formData,
-         processData: false,
-         contentType: false,
-         success: function (text) {
-            if (text == "success") {
-               reviewFormSuccess();
-            } else {
-               reviewFormError();
-               submitReviewMSG(false, text);
-            }
-         },
-         error: function (err) {
-            reviewFormError();
-            submitReviewMSG(false, err.status + ' - ' + err.responseText || err.statusText);
-         },
-      });*/
    }
 
    function reviewFormSuccess() {
@@ -491,11 +466,12 @@
    function submitReviewMSG(valid, msg) {
       if (valid) {
          var msgClasses = "h3 text-center fadeInUp animated text-success";
+         $("#review-form-submit").text("Review Added!")
       } else {
          var msgClasses = "h3 text-center shake animated text-danger";
+         $("#review-form-submit").removeAttr("disabled").text("Post Review")
       }
       $("#reviewMsgSubmit").removeClass().addClass(msgClasses).text(msg);
-      $("#review-form-submit").removeAttr("disabled").text("Add Review");
    }
    
    /**

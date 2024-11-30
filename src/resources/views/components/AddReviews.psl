@@ -61,7 +61,7 @@
                type="submit"
                class="btn btn-fill btn-block"
                id="review-form-submit">
-               Add Review
+               Post Review
             </button>
          </div>
       </div>

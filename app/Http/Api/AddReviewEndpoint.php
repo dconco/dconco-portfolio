@@ -10,17 +10,16 @@ final class AddReviewEndpoint extends ApiController
 {
 	public function store(Request $req)
 	{
-		$fullname = $profile_url = $message = $avatar = null;
-
-		extract($req->post());
 		http_response_code(400);
+		$fullname = $profile_url = $message = $avatar = null;
+		extract($req->post());
 		$avatar = $req->files('avatar');
 
 		/**
 		 * Validate the request body
 		 */
 		if (!$fullname || !$profile_url || !$message || !$avatar) {
-			return $req->files();
+			exit('Invalid request body');
 		}
 		if (!filter_var($profile_url, FILTER_VALIDATE_URL)) {
 			return 'Enter a valid URL';
@@ -40,7 +39,7 @@ final class AddReviewEndpoint extends ApiController
 		if (!is_dir($reviews_dir)) {
 			mkdir(directory: $reviews_dir, recursive: true);
 		}
-		/*
+
 		// Upload the image
 		if (!move_uploaded_file($avatar->tmp_name, "$reviews_dir/$new_file")) {
 			http_response_code(500);
@@ -49,7 +48,7 @@ final class AddReviewEndpoint extends ApiController
 
 		/**
 		 * Add the information to the database
-		 *
+		 */
 		Reviews::check_connection();
 		$reviews = new Reviews();
 
@@ -58,7 +57,7 @@ final class AddReviewEndpoint extends ApiController
 		$reviews->message = $message;
 		$reviews->avatar = $new_file;
 
-		$reviews->Save();*/
+		$reviews->Save();
 
 		http_response_code(200);
 		return 'success';
@@ -69,11 +68,12 @@ final class AddReviewEndpoint extends ApiController
 		$imgType = getimagesize($avatar->tmp_name);
 
 		if (!$imgType) {
+			http_response_code(415);
 			exit('Invalid image type');
 		}
 
-		if ($avatar->size > 1000000) {
-			exit('Image size should be less than 1mb');
+		if ($avatar->size > 5000000) {
+			exit('Image size should be less than 5mb');
 		}
 	}
 }

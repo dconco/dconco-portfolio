@@ -6,6 +6,8 @@
 
 {{! JQUERY FIRST, THEN POPPER.JS, THEN BOOTSTRAP JS !}}
 
+{{! AXIOS !}}
+<script src="{{ asset('Assets::Plugins::Js::Axios.min.js') }}"></script>
 {{! JQUERY !}}
 <script src="{{ asset('Assets::Plugins::Js::Jquery.min.js') }}"></script>
 {{! POPPER !}}
