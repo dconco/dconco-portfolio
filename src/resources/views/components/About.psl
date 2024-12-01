@@ -3,95 +3,89 @@
      ABOUT
   ===================
   -->
+<br />
+<br />
+<br />
 <section class="mh-about" id="mh-about">
-	<div class="container">
-		<div class="row section-separator">
-			<div class="col-sm-12 col-md-6">
-				<div
-					class="mh-about-img shadow-2 wow fadeInUp"
-					data-wow-duration="0.8s"
-					data-wow-delay="0.4s"
-				>
-					<img
-						src="{{ import('../../assets/images/ab-img.png') }}"
-						alt="About dconco icon"
-						class="img-fluid"
-					/>
-				</div>
-			</div>
-			<div class="col-sm-12 col-md-6">
-				<div class="mh-about-inner">
-					<h2
-						class="wow fadeInUp"
-						data-wow-duration="0.8s"
-						data-wow-delay="0.1s"
-					>
-						About Me
-					</h2>
-					<p
-						class="wow fadeInUp"
-						data-wow-duration="0.8s"
-						data-wow-delay="0.2s"
-					>
-						I'm dconco, short for Dave Conco, a creative fusion of coding expertise with diverse talents.
-						<br />
-						<br />
+   <div class="container">
+      <div class="row section-separator">
+         <div class="col-sm-12 col-md-6">
+            <div
+               class="mh-about-img shadow-2 wow fadeInUp"
+               data-wow-duration="0.8s"
+               data-wow-delay="0.4s">
+               <img
+                  src="{{ import('../../assets/images/ab-img.png') }}"
+                  alt="About dconco icon"
+                  class="img-fluid" />
+            </div>
+         </div>
+         <div class="col-sm-12 col-md-6">
+            <div class="mh-about-inner">
+               <h2
+                  class="wow fadeInUp"
+                  data-wow-duration="0.8s"
+                  data-wow-delay="0.1s">
+                  About Me
+               </h2>
+               <p
+                  class="wow fadeInUp"
+                  data-wow-duration="0.8s"
+                  data-wow-delay="0.2s">
+                  I'm dconco, short for Dave Conco, a creative fusion of coding expertise with diverse talents.
+                  <br />
+                  <br />
                   <? if (isset(Props()['detailed'])): ?>
-						I have a passion for community services, creating innovative frameworks and libraries, and contributing to public repositories.
-						Notably, I developed and maintain the <b><a href="https://github.com/phpslides">PhpSlides</a></b> framework. My focus areas include:
-						<br />
-						<br />
+                  I have a passion for community services, creating innovative frameworks and libraries, and contributing to public repositories.
+                  Notably, I developed and maintain the <b><a href="https://github.com/phpslides">PhpSlides</a></b> framework. My focus areas include:
+                  <br />
+                  <br />
                   <? else: ?>
                   I focus on:
-						<br />
+                  <br />
                   <? endif ?>
-						Building full-stack websites.
-						<br />
+                  Building full-stack websites.
+                  <br />
                   Designing and implementing APIs (Application Programming Interfaces).
-						<br />
+                  <br />
                   Developing mobile applications for both Android and iOS using React Native.
-						<br />
-						Some of the perfect well-known languages/frameworks listed below:
-					</p>
-					<div
-						class="mh-about-tag wow fadeInUp"
-						data-wow-duration="0.8s"
-						data-wow-delay="0.3s"
-					>
-						<ul>
-							<li><span>HTML</span></li>
-							<li><span>CSS</span></li>
-							<li><span>JavaScript</span></li>
-							<li><span>Typescript</span></li>
-							<li><span>ReactJS</span></li>
-							<li><span>PHP</span></li>
-							<li><span>PhpSlides</span></li>
-							<li><span>SQL</span></li>
-							<li><span>Bootstrap 5</span></li>
-							<li><span>Tailwindcss</span></li>
-							<li><span>jQuery</span></li>
-						</ul>
-					</div>
-					<? if (isset(Props()['detailed'])): ?>
-					<a
-						href="mailto:info@dconco.dev"
-						class="btn btn-fill wow fadeInUp"
-						data-wow-duration="0.8s"
-						data-wow-delay="0.4s"
-						>Email Now!<i class="fa fa-envelope-o"></i
-					></a>
-					<? else: ?>
-					<a
-						href="{{ route('about') }}"
-						class="btn btn-fill wow fadeInUp"
-						data-wow-duration="0.8s"
-						data-wow-delay="0.4s"
-						onclick="$('.section-loader').fadeIn('slow')"
-						>Read more<i class="fa fa-arrow-circle-o-right"></i
-					></a>
-					<? endif ?>
-				</div>
-			</div>
-		</div>
-	</div>
+                  <br />
+                  Some of the perfect well-known languages/frameworks listed below:
+               </p>
+               <div
+                  class="mh-about-tag wow fadeInUp"
+                  data-wow-duration="0.8s"
+                  data-wow-delay="0.3s">
+                  <ul>
+                     <li><span>HTML</span></li>
+                     <li><span>CSS</span></li>
+                     <li><span>JavaScript</span></li>
+                     <li><span>Typescript</span></li>
+                     <li><span>ReactJS</span></li>
+                     <li><span>PHP</span></li>
+                     <li><span>PhpSlides</span></li>
+                     <li><span>SQL</span></li>
+                     <li><span>Bootstrap 5</span></li>
+                     <li><span>Tailwindcss</span></li>
+                     <li><span>jQuery</span></li>
+                  </ul>
+               </div>
+               <? if (isset(Props()['detailed'])): ?>
+               <a
+                  href="mailto:info@dconco.dev"
+                  class="btn btn-fill wow fadeInUp"
+                  data-wow-duration="0.8s"
+                  data-wow-delay="0.4s">Email Now!<i class="fa fa-envelope-o"></i></a>
+               <? else: ?>
+               <a
+                  href="{{ route('about') }}"
+                  class="btn btn-fill wow fadeInUp"
+                  data-wow-duration="0.8s"
+                  data-wow-delay="0.4s"
+                  onclick="$('.section-loader').fadeIn('slow')">Read more<i class="fa fa-arrow-circle-o-right"></i></a>
+               <? endif ?>
+            </div>
+         </div>
+      </div>
+   </div>
 </section>

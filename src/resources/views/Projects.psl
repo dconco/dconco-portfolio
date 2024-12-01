@@ -13,6 +13,9 @@
           FEATURE PROJECTS
         ===================
         -->
+   <br />
+   <br />
+   <br />
    <section class="mh-featured-project image-bg featured-img-one">
       <div class="">
          <div class="container">
@@ -281,6 +284,15 @@
                </div>
             </div>
             <!-- End: .row -->
+
+            <div style="display:flex; justify-content:center">
+               <a
+                  href="{{ route('contact') }}"
+                  class="btn btn-fill wow fadeInUp"
+                  data-wow-duration="0.8s"
+                  data-wow-delay="0.4s"
+                  onclick="$('.section-loader').fadeIn('slow')">Contact me now &nbsp;<i class="fa fa-arrow-circle-o-right"></i></a>
+            </div>
          </div>
       </div>
    </section>

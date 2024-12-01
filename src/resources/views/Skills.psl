@@ -13,6 +13,9 @@
            SKILLS
         ===================
         -->
+   <br />
+   <br />
+   <br />
    <section class="mh-skills" id="mh-skills">
       <div class="home-v-img">
          <div class="container">
@@ -268,7 +271,6 @@
                   class="btn btn-fill wow fadeInUp"
                   data-wow-duration="0.8s"
                   data-wow-delay="0.4s"
-                  style=""
                   onclick="$('.section-loader').fadeIn('slow')">Check my projects &nbsp;<i class="fa fa-arrow-circle-o-right"></i></a>
             </div>
          </div>
