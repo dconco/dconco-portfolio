@@ -33,13 +33,16 @@
 						data-wow-duration="0.8s"
 						data-wow-delay="0.2s"
 					>
-						I'm dconco, short for Dave Conco, a creative fusion of coding expertise and diverse talents.
+						I'm dconco, short for Dave Conco, a creative fusion of coding expertise with diverse talents.
 						<br />
 						<br />
                   <? if (isset(Props()['detailed'])): ?>
 						I have a passion for community services, creating innovative frameworks and libraries, and contributing to public repositories.
 						Notably, I developed and maintain the <b><a href="https://github.com/phpslides">PhpSlides</a></b> framework. My focus areas include:
 						<br />
+						<br />
+                  <? else: ?>
+                  I focus on:
 						<br />
                   <? endif ?>
 						Building full-stack websites.

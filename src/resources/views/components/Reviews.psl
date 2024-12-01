@@ -1,3 +1,14 @@
+<?
+use Forgery\DconcoPortfolio\Reviews\Reviews;
+
+Reviews::static();
+$reviews = Reviews::SearchMany('SELECT * FROM reviews ORDER BY date ASC');
+
+function trim_newline(string $str) {
+   return preg_replace('/(\r?\n){2,}/', "\n", $str);
+}
+?>
+
 <!--
   ===================
      Testimonial
@@ -18,95 +29,32 @@
                id="mh-client-review"
                data-wow-duration="0.8s"
                data-wow-delay="0.3s">
-               <div class="each-client-item">
-                  <div class="mh-client-item dark-bg black-shadow-1">
-                     <img
-                        src="{{ import('../../assets/images/c-1.png') }}"
-                        alt=""
-                        class="img-fluid" />
-                     <p>
-                        This app has completely transformed how I manage my day-to-day tasks. It's intuitive, feature-rich, and consistently reliable. The regular updates show the developers care about user feedback. Highly recommend it to anyone seeking a seamless and efficient productivity tool.
-                     </p>
-                     <h4>John Mike</h4>
-                     <span>CEO, Author.Inc</span>
-                  </div>
-               </div>
-               <div class="each-client-item">
-                  <div class="mh-client-item dark-bg black-shadow-1">
-                     <img
-                        src="{{ import('../../assets/images/c-1.png') }}"
-                        alt=""
-                        class="img-fluid" />
-                     <p>
-                        Absolute wonderful ! I am completely blown
-                        away.The very best.I was amazed at the quality
-                     </p>
-                     <h4>John Mike</h4>
-                     <span>CEO, Author.Inc</span>
-                  </div>
-               </div>
 
+               <? foreach ($reviews as $review): ?>
                <div class="each-client-item">
                   <div class="mh-client-item dark-bg black-shadow-1">
-                     <img
-                        src="{{ import('../../assets/images/c-1.png') }}"
-                        alt=""
-                        class="img-fluid" />
+                     <div style="width:160px; height:160px; margin:auto">
+                        <img
+                           src="{{ import('../../uploads/reviews/' . $review->avatar) }}"
+                           alt=""
+                           class="img-fluid"
+                           style="width:100%; height:100%; object-fit:cover; object-position:center;" />
+                     </div>
+                     <br />
                      <p>
-                        Absolute wonderful ! I am completely blown
-                        away.The very best.I was amazed at the quality
+                        {{ nl2br(trim_newline($review->message)) }}
                      </p>
-                     <h4>John Mike</h4>
-                     <span>CEO, Author.Inc</span>
+                     <br />
+                     <h3>{{ $review->fullname }}</h3>
+                     <a href="{{$review->profile_url}}" style="color:cyan">View Profile</a>
                   </div>
                </div>
-               <div class="each-client-item">
-                  <div class="mh-client-item dark-bg black-shadow-1">
-                     <img
-                        src="{{ import('../../assets/images/c-1.png') }}"
-                        alt=""
-                        class="img-fluid" />
-                     <p>
-                        Absolute wonderful ! I am completely blown
-                        away.The very best.I was amazed at the quality
-                     </p>
-                     <h4>John Mike</h4>
-                     <span>CEO, Author.Inc</span>
-                  </div>
-               </div>
-               <div class="each-client-item">
-                  <div class="mh-client-item dark-bg black-shadow-1">
-                     <img
-                        src="{{ import('../../assets/images/c-1.png') }}"
-                        alt=""
-                        class="img-fluid" />
-                     <p>
-                        Absolute wonderful ! I am completely blown
-                        away.The very best.I was amazed at the quality
-                     </p>
-                     <h4>John Mike</h4>
-                     <span>CEO, Author.Inc</span>
-                  </div>
-               </div>
-
-               <div class="each-client-item">
-                  <div class="mh-client-item dark-bg black-shadow-1">
-                     <img
-                        src="{{ import('../../assets/images/c-1.png') }}"
-                        alt=""
-                        class="img-fluid" />
-                     <p>
-                        Absolute wonderful ! I am completely blown
-                        away.The very best.I was amazed at the quality
-                     </p>
-                     <h4>John Mike</h4>
-                     <span>CEO, Author.Inc</span>
-                  </div>
-               </div>
+               <? endforeach ?>
+               
             </div>
          </div>
          
-         <div style="margin:auto;width:50% min-width:150px">
+         <div style="margin:auto; width:50%; min-width:230px">
             <button class="btn btn-fill btn-block" id="review-btn">
                Give me a Review 🌟
             </button>

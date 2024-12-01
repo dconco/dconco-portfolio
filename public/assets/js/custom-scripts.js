@@ -134,11 +134,12 @@
       loop: false,
       responsiveClass: true,
       nav: true,
-      autoplay: false,
+      autoplay: true,
       smartSpeed: 450,
-      stopOnHover: true,
+      stopOnHover: false,
       animateIn: "slideInRight",
       animateOut: "slideOutLeft",
+      pagination: true,
       autoplayHoverPause: true,
       responsive: {
          0: {
