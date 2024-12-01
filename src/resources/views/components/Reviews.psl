@@ -1,12 +1,13 @@
-<?
+<?php
 use Forgery\DconcoPortfolio\Reviews\Reviews;
+
+function trim_newline (string $str)
+{
+   return preg_replace('/(\r?\n){2,}/', "\n", $str);
+}
 
 Reviews::static();
 $reviews = Reviews::SearchMany('SELECT * FROM reviews WHERE status=%s ORDER BY id DESC', 'approved');
-
-function trim_newline(string $str) {
-   return preg_replace('/(\r?\n){2,}/', "\n", $str);
-}
 ?>
 
 <!--
@@ -31,36 +32,36 @@ function trim_newline(string $str) {
                data-wow-delay="0.3s">
 
                <? foreach ($reviews as $review): ?>
-               <div class="each-client-item">
-                  <div class="mh-client-item dark-bg black-shadow-1">
-                     <div style="width:160px; height:160px; margin:auto">
-                        <img
-                           src="{{ import('../../uploads/reviews/' . $review->avatar) }}"
-                           alt=""
-                           class="img-fluid"
-                           style="width:100%; height:100%; object-fit:cover; object-position:center;" />
+                  <div class="each-client-item">
+                     <div class="mh-client-item dark-bg black-shadow-1">
+                        <div style="width:160px; height:160px; margin:auto">
+                           <img
+                              src="{{ import('../../uploads/reviews/' . $review->avatar) }}"
+                              alt=""
+                              class="img-fluid"
+                              style="width:100%; height:100%; object-fit:cover; object-position:center;" />
+                        </div>
+                        <br />
+                        <p>
+                           {{ nl2br(trim_newline($review->message)) }}
+                        </p>
+                        <br />
+                        <h3>{{ $review->fullname }}</h3>
+                        <a href="{{$review->profile_url}}" target="_blank" style="color:cyan">View Profile</a>
                      </div>
-                     <br />
-                     <p>
-                        {{ nl2br(trim_newline($review->message)) }}
-                     </p>
-                     <br />
-                     <h3>{{ $review->fullname }}</h3>
-                     <a href="{{$review->profile_url}}" target="_blank" style="color:cyan">View Profile</a>
                   </div>
-               </div>
                <? endforeach ?>
-               
+
             </div>
          </div>
-         
+
          <div style="margin:auto; width:50%; min-width:230px">
             <button class="btn btn-fill btn-block" id="review-btn">
                Give me a Review 🌟
             </button>
          </div>
          <br />
-         
+
          <div class="row section-separator">
             <!INCLUDES path="./AddReviews" />
          </div>
