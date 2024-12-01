@@ -1,4 +1,5 @@
 <?php
+use PhpSlides\Application;
 use PhpSlides\Props;
 $props = new Props();
 
@@ -16,7 +17,6 @@ $keywords = [
 
 $metaTitle = $props->metaTitle ?? $props->title;
 $keywords = implode(', ', $keywords);
-$app_url = getenv('APP_URL');
 ?>
 
 <head>
@@ -32,14 +32,14 @@ $app_url = getenv('APP_URL');
    {{! OPEN GRAPH META TAGS !}}
    <meta property="og:title" content="{{ $metaTitle }}">
    <meta property="og:description" content="dconco - A creative fusion of coding expertise with diverse talents. A passionate software developer!">
-   <meta property="og:image" content="{{$app_url}}/apple-touch-icon.png">
-   <meta property="og:url" content="{{$app_url}}">
+   <meta property="og:image" content="{{Application::$REMOTE_ADDR}}/apple-touch-icon.png">
+   <meta property="og:url" content="{{Application::$REMOTE_ADDR}}">
    <meta property="og:type" content="website">
    {{! TWITTER CARD OPTIONAL !}}
    <meta name="twitter:card" content="summary_large_image">
    <meta name="twitter:title" content="{{ $metaTitle }}">
    <meta name="twitter:description" content="dconco - A creative fusion of coding expertise with diverse talents. A passionate software developer!">
-   <meta name="twitter:image" content="{{$app_url}}/images/twitter.png">
+   <meta name="twitter:image" content="{{Application::$REMOTE_ADDR}}/images/twitter.png">
 
    {{! FAV AND ICONS !}}
    <link rel="icon" hreflang="en" href="{{ asset('::Favicon-16x16.png') }}" type="image/png" sizes="16x16" />

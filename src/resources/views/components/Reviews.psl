@@ -2,7 +2,7 @@
 use Forgery\DconcoPortfolio\Reviews\Reviews;
 
 Reviews::static();
-$reviews = Reviews::SearchMany('SELECT * FROM reviews ORDER BY date ASC');
+$reviews = Reviews::SearchMany('SELECT * FROM reviews WHERE status=%s ORDER BY id DESC', 'approved');
 
 function trim_newline(string $str) {
    return preg_replace('/(\r?\n){2,}/', "\n", $str);
@@ -46,7 +46,7 @@ function trim_newline(string $str) {
                      </p>
                      <br />
                      <h3>{{ $review->fullname }}</h3>
-                     <a href="{{$review->profile_url}}" style="color:cyan">View Profile</a>
+                     <a href="{{$review->profile_url}}" target="_blank" style="color:cyan">View Profile</a>
                   </div>
                </div>
                <? endforeach ?>
