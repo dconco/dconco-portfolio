@@ -10,6 +10,6 @@ Api::v1()->route(url: '/review/add', controller: AddReviewEndpoint::class);
 
 $admin_review = Api::v1()->define('/admin/review', ListReviewEndpoint::class);
 
-$admin_review->map([
+$admin_review->withGuard('admin')->map([
 	'/list' => [POST, '@list'],
 ]);

@@ -1,5 +1,5 @@
 <?php
-use PhpSlides\Application;
+use PhpSlides\Foundation\Application;
 use PhpSlides\Props;
 $props = new Props();
 

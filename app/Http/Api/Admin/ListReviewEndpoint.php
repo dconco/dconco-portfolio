@@ -7,8 +7,8 @@ use PhpSlides\Http\ApiController;
 
 final class ListReviewEndpoint extends ApiController
 {
-	public function index(Request $req)
+	public function list(Request $req)
 	{
-		return '';
+		return 'Hello';
 	}
 }
