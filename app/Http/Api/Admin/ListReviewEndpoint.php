@@ -10,6 +10,14 @@ final class ListReviewEndpoint extends ApiController
 {
 	public function list(Request $req)
 	{
-		return (new Reviews())->SearchMany();
+		$all = [];
+		$reviews = (new Reviews())->SearchMany();
+
+		foreach ($reviews as $value)
+		{
+			$all[] = $value->_orm_row_orig;
+		}
+
+		return json_encode($all);
 	}
 }

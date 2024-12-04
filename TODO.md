@@ -13,3 +13,5 @@
 ## Add `Render::WebRoute();` to the end of HotReload in `Application.php`
 
 ## In `Request::urlParam()` make quote also be serialized using ENT_QUOTES
+
+## Add view route to accept `VIEW|GET` request method
