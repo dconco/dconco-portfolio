@@ -2,7 +2,6 @@
 
 namespace App\Guards;
 
-use PhpSlides\Web\JWT;
 use PhpSlides\Http\Auth\AuthGuard;
 
 final class AdminGuard extends AuthGuard

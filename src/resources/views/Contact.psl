@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<!INCLUDES
+   path="components/Head"
+   title="dconco | contact me"
+   metaTitle="Dave Conco (dconco) | Contact me" />
+
+<body class="dark-vertion black-bg">
+   <!INCLUDES path="components/Header" active="contact" />
+
+   <br />
+   <br />
+   <br />
+   <div class="col-sm-12 mb-5 top-icon">
+      <div
+         class="hero-img wow fadeInUp"
+         data-wow-duration="0.8s"
+         data-wow-delay="0.6s"
+         style="padding: 50px">
+         <div class="img-border">
+            <img
+               src="{{ import('../assets/logo.png') }}"
+               alt="dconco logo icon"
+               class="img-fluid" />
+         </div>
+      </div>
+   </div>
+
+   <!INCLUDES path="components/Footer" />
+   <!INCLUDES path="components/JsFiles" />
+</body>
+
+</html>

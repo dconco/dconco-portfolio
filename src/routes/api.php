@@ -8,8 +8,10 @@ use App\Http\Api\Admin\ListReviewEndpoint;
 Api::v1()->route(url: '/contact', controller: ContactEndpoint::class);
 Api::v1()->route(url: '/review/add', controller: AddReviewEndpoint::class);
 
-$admin_review = Api::v1()->define('/admin/review', ListReviewEndpoint::class);
+$admin_review = Api::v1()
+   ->define('/admin/review', ListReviewEndpoint::class)
+   ->withGuard('admin');
 
-$admin_review->withGuard('admin')->map([
-	'/list' => [POST, '@list'],
+$admin_review->withGuard(null)->map([
+ '/list' => [ 'GET|POST', '@list' ],
 ]);
