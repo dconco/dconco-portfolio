@@ -2,22 +2,23 @@
 
 namespace App\Http\Api\Admin;
 
-use PhpSlides\Http\Request;
 use PhpSlides\Http\ApiController;
 use Forgery\DconcoPortfolio\Reviews\Reviews;
 
 final class ListReviewEndpoint extends ApiController
 {
-	public function list(Request $req)
+	public function list()
 	{
 		$all = [];
-		$reviews = (new Reviews())->SearchMany();
+		$reviews = (new Reviews())->SearchMany('SELECT * FROM reviews ORDER BY status pending');
 
 		foreach ($reviews as $value)
 		{
 			$all[] = $value->_orm_row_orig;
 		}
 
-		return json_encode($all);
+		return json_encode(['message' => $all]);
 	}
+
+	public function 
 }

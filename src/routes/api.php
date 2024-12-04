@@ -6,10 +6,10 @@ use App\Http\Api\AddReviewEndpoint;
 use App\Http\Api\Admin\ListReviewEndpoint;
 
 Api::v1()->route(url: '/contact', controller: ContactEndpoint::class);
-Api::v1()->route(url: '/review/add', controller: AddReviewEndpoint::class);
+Api::v1()->route(url: '/reviews/add', controller: AddReviewEndpoint::class);
 
 $admin_review = Api::v1()
-   ->define('/admin/review', ListReviewEndpoint::class)
+   ->define('/admin/reviews', ListReviewEndpoint::class)
    ->withGuard('admin');
 
 $admin_review->withGuard('admin')->map([

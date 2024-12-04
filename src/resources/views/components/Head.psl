@@ -1,6 +1,6 @@
 <?php
-use PhpSlides\Foundation\Application;
 use PhpSlides\Props;
+use PhpSlides\Foundation\Application;
 $props = new Props();
 
 $keywords = [
@@ -26,9 +26,15 @@ $keywords = implode(', ', $keywords);
    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no" />
 
    <meta name="title" content="{{ $metaTitle }}" />
-   <meta name="developer" content="Dave Conco (dconco)" />
    <meta name="keywords" content="{{ $keywords }}" />
+   <meta name="developer" content="Dave Conco (dconco)" />
+   <meta name="designer" content="Dave Conco (dconco)" />
+   <meta name="creator" content="Dave Conco (dconco)" />
+   <meta name="author" content="Dave Conco (dconco)" />
+   <meta name="copyright" content="dconco" />
+   <meta name="application-name" content="dconco portfolio" />
    <meta name="description" content="dconco - A creative fusion of coding expertise with diverse talents. A passionate software developer!" />
+   <meta name="robots" content="index, follow" />
    {{! OPEN GRAPH META TAGS !}}
    <meta property="og:title" content="{{ $metaTitle }}">
    <meta property="og:description" content="dconco - A creative fusion of coding expertise with diverse talents. A passionate software developer!">
