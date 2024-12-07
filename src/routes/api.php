@@ -12,6 +12,7 @@ $admin_review = Api::v1()
    ->define('/admin/reviews', ListReviewEndpoint::class)
    ->withGuard('admin');
 
-$admin_review->withGuard('admin')->map([
- '/list' => [ 'POST', '@list' ],
+$admin_review->withGuard()->map([
+ '/list' => [ 'POST|GET', '@list' ],
+ '/approve/{review_id}' => [ 'GET', '@approve' ]
 ]);
