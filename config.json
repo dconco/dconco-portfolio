@@ -1,5 +1,7 @@
 {
 	"deny": [],
-	"message": {},
+	"message": {
+		"contents": "<h2>This resources you're trying to access is forbidden</h2>"
+	},
 	"charset": "UTF-8"
 }

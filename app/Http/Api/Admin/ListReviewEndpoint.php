@@ -18,7 +18,7 @@ final class ListReviewEndpoint extends ApiController
 			$all[] = $value->_orm_row_orig;
 		}
 
-		return json_encode([ 'message' => $all ]);
+		return json_encode(['message' => $all]);
 	}
 
 	public function approve (Request $req)
